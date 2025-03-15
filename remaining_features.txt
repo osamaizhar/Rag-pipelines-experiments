@@ -1,0 +1,14 @@
+excel parser
+pptx parser (pdf)
+
+pora course 1 upload krke testing
+
+semantic approach
+
+fine tuning 
+namespace design planning 
+ - each namespace is for one student
+metadata querying ??
+failure based approach functionality
+
+frontend for chatbot and for easier testing
