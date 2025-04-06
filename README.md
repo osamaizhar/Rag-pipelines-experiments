@@ -40,6 +40,7 @@ This repository is a personal lab for experimenting with **Retrieval-Augmented G
 ```bash
 git clone https://github.com/osamaizhar/Rag-pipelines-experiments.git
 cd Rag-pipelines-experiments
+
 ```
 
 ### 2. Install Requirements
