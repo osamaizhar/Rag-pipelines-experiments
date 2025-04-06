@@ -9,7 +9,7 @@ This repository is a personal lab for experimenting with **Retrieval-Augmented G
 ## ✨ What's Inside?
 
 - 📄 Load and split documents into context chunks
-- 🧠 Generate embeddings using Hugging Face’s `all-MiniLM-L6-v2`
+- 🧠 Generate embeddings using Hugging Face’s `jinaai/jina-embeddings-v2-base-en`
 - 🧬 Store and retrieve vectors with **Pinecone**
 - ⚡ Query Groq’s `llama3-70b-8192` via **LangChain**
 - 💬 Get context-aware LLM responses
