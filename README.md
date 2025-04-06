@@ -78,7 +78,4 @@ export PINECONE_ENVIRONMENT="your_pinecone_environment"  # e.g., "gcp-starter"
 ---
 
 > ⚡ Built for experimentation and speed. Powered by Groq’s LPU inference, Pinecone vector DB, and LangChain orchestration.
-```
-
----
 
