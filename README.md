@@ -33,18 +33,6 @@ This repository is a personal lab for experimenting with **Retrieval-Augmented G
 
 ---
 
-## 📂 Repository Structure
-
-```
-.
-├── groq_test.ipynb            # ✅ Main notebook: Groq + Pinecone + RAG + Gradio
-├── data.txt                   # Input text file used for embedding
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
-```
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repo
