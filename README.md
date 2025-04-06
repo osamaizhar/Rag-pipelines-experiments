@@ -64,14 +64,17 @@ export PINECONE_ENVIRONMENT="your_pinecone_environment"  # e.g., "gcp-starter"
 ## ▶️ How to Use
 
 1. Add your custom data to `data.txt`
-2. Run all cells in `groq_test.ipynb`
-3. Use the **Gradio chat interface** to:
+2. To run the full pipeline (including data processing and embedding):
+   - Run all cells in `groq_test.ipynb`
+3. To run only the inference (using pre-existing embeddings):
+   - Comment out or skip the cells for upsert, chunking, and chunks embedding in `groq_test.ipynb`
+   - Run the remaining cells
+4. Use the **Gradio chat interface** to:
    - Ask questions about your data
    - View **conversation history**
    - 🗑️ **Delete last message**
    - ♻️ **Clear entire chat**
-4. Get fast, context-aware responses using LLaMA 3 on Groq
-
+5. Get fast, context-aware responses using LLaMA 3 on Groq
 ---
 
 > ⚡ Built for experimentation and speed. Powered by Groq’s LPU inference, Pinecone vector DB, and LangChain orchestration.
