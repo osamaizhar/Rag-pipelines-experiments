@@ -1,10 +1,6 @@
 excel parser
 pptx parser (pdf)
 
-pora course 1 upload krke testing
-
-semantic approach
-
 fine tuning 
 namespace design planning 
  - each namespace is for one student
