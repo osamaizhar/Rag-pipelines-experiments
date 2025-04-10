@@ -1,7 +1,8 @@
-'''
+"""
 CODE For only chatting with groq inference and gui , upserting code has all been removed
 
-'''
+"""
+
 import os
 import requests
 import gradio as gr
@@ -34,30 +35,34 @@ LLM_MODEL = "llama3-70b-8192"
 # Configure headers for Groq API requests
 GROQ_HEADERS = {
     "Authorization": f"Bearer {GROQ_API_KEY}",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
 }
 
 pc = Pinecone(api_key=PINECONE_API)
 print(PINECONE_API)
 
 index = pc.Index("ai-coach")
-#index = pc.Index("ahsan-400pg-pdf-doc-test")
+# index = pc.Index("ahsan-400pg-pdf-doc-test")
 
 
 embedding_model = AutoModel.from_pretrained(
-    'jinaai/jina-embeddings-v2-base-en', trust_remote_code=True)
+    "jinaai/jina-embeddings-v2-base-en", trust_remote_code=True
+)
 
 # Function to generate embeddings without tokenization
+
 
 def get_embedding(data):
     embeddings = embedding_model.encode(data).tolist()
     return embeddings
 
+
 # Function to query Pinecone index using embeddings
 def query_pinecone(embedding):
     # Use keyword arguments to pass the embedding and other parameters
     result = index.query(vector=embedding, top_k=15, include_metadata=True)
-    return result['matches']
+    return result["matches"]
+
 
 # Function to query Groq LLM
 def query_groq(prompt: str) -> str:
@@ -68,8 +73,8 @@ def query_groq(prompt: str) -> str:
             "model": LLM_MODEL,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.5,
-            "max_tokens": 8192  # max from groq website
-        }
+            "max_tokens": 8192,  # max from groq website
+        },
     )
 
     if response.status_code != 200:
@@ -91,19 +96,19 @@ def count_tokens(text: str) -> int:
 # Initialize empty conversation history (list of tuples)
 conversation_history = []
 
+
 def process_user_query(user_query: str, conversation_history: list):
     print(f"User Query Tokens: {count_tokens(user_query)}")
 
     # Generate embedding and get relevant context
     embedding = get_embedding(user_query)
     relevant_chunks = query_pinecone(embedding)
-    context = "\n".join(chunk['metadata']["text"] for chunk in relevant_chunks)
+    context = "\n".join(chunk["metadata"]["text"] for chunk in relevant_chunks)
     print("CONTEXT:", context)
 
     # Format conversation history for the prompt
     history_str = "\n".join(
-        f"User: {user}\nCoach: {response}" 
-        for user, response in conversation_history
+        f"User: {user}\nCoach: {response}" for user, response in conversation_history
     )
 
     # Create structured prompt
@@ -131,21 +136,22 @@ def process_user_query(user_query: str, conversation_history: list):
     # Return updated history with new interaction
     return conversation_history + [(user_query, groq_response)]
 
+
 # Gradio Interface
 with gr.Blocks() as interface:
     gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
     gr.Markdown("Welcome! I'm here to help you learn. Type your question below.")
-    
+
     # State management
     chat_history = gr.State(conversation_history)
-    
+
     with gr.Row():
         chatbot = gr.Chatbot(height=500)
         with gr.Column(scale=0.5):
             context_display = gr.Textbox(label="Relevant Context", interactive=False)
 
     user_input = gr.Textbox(label="Your Question", placeholder="Type here...")
-    
+
     with gr.Row():
         submit_btn = gr.Button("Submit", variant="primary")
         undo_btn = gr.Button("Undo Last")
@@ -154,57 +160,79 @@ with gr.Blocks() as interface:
     def handle_submit(user_input, history):
         if not user_input.strip():
             return gr.update(), history, ""
-        
+
         # Process query and update history
         new_history = process_user_query(user_input, history)
-        
+
         # Get latest context for display
-        latest_context = "\n".join([chunk['metadata']["text"] for chunk in query_pinecone(
-            get_embedding(user_input)
-        )][:3])  # Show top 3 context snippets
-        
+        latest_context = "\n".join(
+            [
+                chunk["metadata"]["text"]
+                for chunk in query_pinecone(get_embedding(user_input))
+            ][:3]
+        )  # Show top 3 context snippets
+
         return "", new_history, latest_context
 
     # Component interactions
     submit_btn.click(
         handle_submit,
         [user_input, chat_history],
-        [user_input, chat_history, context_display]
-    ).then(
-        lambda x: x,
-        [chat_history],
-        [chatbot]
-    )
-    
+        [user_input, chat_history, context_display],
+    ).then(lambda x: x, [chat_history], [chatbot])
+
     # Add submit on Enter key press
     user_input.submit(
         handle_submit,
         [user_input, chat_history],
-        [user_input, chat_history, context_display]
-    ).then(
-        lambda x: x,
-        [chat_history],
-        [chatbot]
-    )
+        [user_input, chat_history, context_display],
+    ).then(lambda x: x, [chat_history], [chatbot])
 
     undo_btn.click(
-        lambda history: history[:-1] if history else [],
-        [chat_history],
-        [chat_history]
-    ).then(
-        lambda x: x,
-        [chat_history],
-        [chatbot]
-    )
+        lambda history: history[:-1] if history else [], [chat_history], [chat_history]
+    ).then(lambda x: x, [chat_history], [chatbot])
 
-    clear_btn.click(
-        lambda: [],
-        None,
-        [chat_history]
-    ).then(
-        lambda: ([], ""),
-        None,
-        [chatbot, context_display]
+    clear_btn.click(lambda: [], None, [chat_history]).then(
+        lambda: ([], ""), None, [chatbot, context_display]
     )
 
 interface.launch(share=True)
+
+
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
+
+# import sys
+# import os
+
+# # Add the parent directory to sys.path
+# parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.append(parent_dir)
+
+
+# from query_llm import process_user_query
+
+
+# Initialize the FastAPI app
+app = FastAPI()
+
+
+# Define the request body
+class UserQuery(BaseModel):
+    user_query: str
+
+
+@app.post("/process")
+async def process_query(query: UserQuery):
+    user_query = query.user_query
+
+    # Call the function from groq_test.ipynb
+    response = process_user_query(user_query)
+
+    return {"response": response}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
