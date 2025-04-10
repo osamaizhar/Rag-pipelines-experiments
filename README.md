@@ -3,7 +3,7 @@
 
 This repository is a personal lab for experimenting with **Retrieval-Augmented Generation (RAG)** pipelines using the blazing-fast `llama3-70b-8192` model via **Groq**, document embedding via **Hugging Face**, and vector storage via **Pinecone**.
 
-> ✅ Latest notebook: [`gradio_test.ipynb`]
+> ✅ Latest notebook: [`gradio_test_2.ipynb`]
 ---
 
 ## ✨ What's Inside?
