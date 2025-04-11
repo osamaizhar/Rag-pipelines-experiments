@@ -137,112 +137,65 @@ def process_user_query(user_query: str, conversation_history: list):
     return conversation_history + [(user_query, groq_response)]
 
 
-def start_fastapi():
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+with gr.Blocks() as interface:
+    gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
+    gr.Markdown("Welcome! I'm here to help you learn. Type your question below.")
 
+    # State management
+    chat_history = gr.State(conversation_history)
 
-# Gradio Interface
-def start_gradio():
-    with gr.Blocks() as interface:
-        gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
-        gr.Markdown("Welcome! I'm here to help you learn. Type your question below.")
+    with gr.Row():
+        chatbot = gr.Chatbot(height=500)
+        with gr.Column(scale=0.5):
+            context_display = gr.Textbox(label="Relevant Context", interactive=False)
 
-        # State management
-        chat_history = gr.State(conversation_history)
+    user_input = gr.Textbox(label="Your Question", placeholder="Type here...")
 
-        with gr.Row():
-            chatbot = gr.Chatbot(height=500)
-            with gr.Column(scale=0.5):
-                context_display = gr.Textbox(
-                    label="Relevant Context", interactive=False
-                )
+    with gr.Row():
+        submit_btn = gr.Button("Submit", variant="primary")
+        undo_btn = gr.Button("Undo Last")
+        clear_btn = gr.Button("Clear History")
 
-        user_input = gr.Textbox(label="Your Question", placeholder="Type here...")
+    def handle_submit(user_input, history):
+        if not user_input.strip():
+            return gr.update(), history, ""
 
-        with gr.Row():
-            submit_btn = gr.Button("Submit", variant="primary")
-            undo_btn = gr.Button("Undo Last")
-            clear_btn = gr.Button("Clear History")
+        # Process query and update history
+        new_history = process_user_query(user_input, history)
 
-        def handle_submit(user_input, history):
-            if not user_input.strip():
-                return gr.update(), history, ""
+        # Get latest context for display
+        latest_context = "\n".join(
+            [
+                chunk["metadata"]["text"]
+                for chunk in query_pinecone(get_embedding(user_input))
+            ][:3]
+        )  # Show top 3 context snippets
 
-            # Process query and update history
-            new_history = process_user_query(user_input, history)
+        return "", new_history, latest_context
 
-            # Get latest context for display
-            latest_context = "\n".join(
-                [
-                    chunk["metadata"]["text"]
-                    for chunk in query_pinecone(get_embedding(user_input))
-                ][:3]
-            )  # Show top 3 context snippets
+    # Component interactions
+    submit_btn.click(
+        handle_submit,
+        [user_input, chat_history],
+        [user_input, chat_history, context_display],
+    ).then(lambda x: x, [chat_history], [chatbot])
 
-            return "", new_history, latest_context
+    # Add submit on Enter key press
+    user_input.submit(
+        handle_submit,
+        [user_input, chat_history],
+        [user_input, chat_history, context_display],
+    ).then(lambda x: x, [chat_history], [chatbot])
 
-        # Component interactions
-        submit_btn.click(
-            handle_submit,
-            [user_input, chat_history],
-            [user_input, chat_history, context_display],
-        ).then(lambda x: x, [chat_history], [chatbot])
+    undo_btn.click(
+        lambda history: history[:-1] if history else [],
+        [chat_history],
+        [chat_history],
+    ).then(lambda x: x, [chat_history], [chatbot])
 
-        # Add submit on Enter key press
-        user_input.submit(
-            handle_submit,
-            [user_input, chat_history],
-            [user_input, chat_history, context_display],
-        ).then(lambda x: x, [chat_history], [chatbot])
+    clear_btn.click(lambda: [], None, [chat_history]).then(
+        lambda: ([], ""), None, [chatbot, context_display]
+    )
 
-        undo_btn.click(
-            lambda history: history[:-1] if history else [],
-            [chat_history],
-            [chat_history],
-        ).then(lambda x: x, [chat_history], [chatbot])
-
-        clear_btn.click(lambda: [], None, [chat_history]).then(
-            lambda: ([], ""), None, [chatbot, context_display]
-        )
-
-    # interface.launch(share=True)
-    interface.launch(server_name="0.0.0.0", share=True)
-
-
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
-
-# import sys
-# import os
-
-# # Add the parent directory to sys.path
-# parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.append(parent_dir)
-
-
-# from query_llm import process_user_query
-
-
-# Initialize the FastAPI app
-app = FastAPI()
-
-
-# Define the request body
-class UserQuery(BaseModel):
-    user_query: str
-
-
-@app.post("/process")
-async def process_query(query: UserQuery):
-    user_query = query.user_query
-
-    # Call the function from groq_test.ipynb
-    response = process_user_query(user_query)
-
-    return {"response": response}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# interface.launch(share=True)
+interface.launch(server_name="0.0.0.0", share=True)
