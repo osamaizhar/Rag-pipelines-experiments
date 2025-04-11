@@ -237,7 +237,7 @@ async def process_query(query: UserQuery):
     user_query = query.user_query
 
     # Call the function from groq_test.ipynb
-    response = process_user_query(user_query)
+    response = process_user_query(user_query, conversation_history)
 
     return {"response": response}
 
