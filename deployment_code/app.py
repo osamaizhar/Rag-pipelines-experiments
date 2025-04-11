@@ -196,8 +196,8 @@ with gr.Blocks() as interface:
         lambda: ([], ""), None, [chatbot, context_display]
     )
 
-interface.launch(share=True)
-
+# interface.launch(share=True)
+interface.launch(server_name="0.0.0.0", server_port=7860)
 
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
