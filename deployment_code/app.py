@@ -197,7 +197,7 @@ with gr.Blocks() as interface:
     )
 
 # interface.launch(share=True)
-interface.launch(server_name="0.0.0.0", server_port=7860)
+interface.launch(server_name="0.0.0.0")
 
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
