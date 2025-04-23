@@ -3,6 +3,9 @@ CODE For only chatting with groq inference and gui , upserting code has all been
 
 """
 
+from app.dependencies.auth import get_current_user
+from pydantic import BaseModel
+from fastapi import APIRouter, Depends
 import os
 import requests
 import gradio as gr
@@ -137,15 +140,12 @@ def process_user_query(user_query: str, conversation_history: list):
     return conversation_history + [(user_query, groq_response)]
 
 
-def start_fastapi():
-    uvicorn.run(app, host="0.0.0.0", port=8000)
-
-
 # Gradio Interface
 def start_gradio():
     with gr.Blocks() as interface:
         gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
-        gr.Markdown("Welcome! I'm here to help you learn. Type your question below.")
+        gr.Markdown(
+            "Welcome! I'm here to help you learn. Type your question below.")
 
         # State management
         chat_history = gr.State(conversation_history)
@@ -157,7 +157,8 @@ def start_gradio():
                     label="Relevant Context", interactive=False
                 )
 
-        user_input = gr.Textbox(label="Your Question", placeholder="Type here...")
+        user_input = gr.Textbox(label="Your Question",
+                                placeholder="Type here...")
 
         with gr.Row():
             submit_btn = gr.Button("Submit", variant="primary")
@@ -209,40 +210,23 @@ def start_gradio():
     interface.launch(server_name="0.0.0.0", share=True)
 
 
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
-
-# import sys
-# import os
-
-# # Add the parent directory to sys.path
-# parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# sys.path.append(parent_dir)
-
-
-# from query_llm import process_user_query
-
-
 # Initialize the FastAPI app
-app = FastAPI()
-
 
 # Define the request body
+
 class UserQuery(BaseModel):
     user_query: str
 
 
-@app.post("/process")
-async def process_query(query: UserQuery):
-    user_query = query.user_query
+router = APIRouter()
 
-    # Call the function from groq_test.ipynb
-    response = process_user_query(user_query, conversation_history)
 
+class UserQuery(BaseModel):
+    user_query: str
+
+
+@router.post("/process")
+async def process_query(query: UserQuery, current_user: dict = Depends(get_current_user)):
+    print(f"current_user", current_user)
+    response = process_user_query(query.user_query, conversation_history)
     return {"response": response}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="0.0.0.0", port=8000)
