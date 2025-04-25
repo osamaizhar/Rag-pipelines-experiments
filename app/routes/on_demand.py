@@ -227,6 +227,12 @@ async def process_query(
     request: OnDemandReqBody, db: Session = Depends(get_db)
 ) -> StandardResponse:
     try:
+        # Check if user_query is missing or empty
+        if not request.user_query or not isinstance(request.user_query, str):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="User query is required and must be a string.",
+            )
         # If session_id is not provided, create a new ChatSession
         if not request.session_id:
             new_session = ChatSession(
