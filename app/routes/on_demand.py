@@ -3,22 +3,20 @@ CODE For only chatting with groq inference and gui , upserting code has all been
 
 """
 
-from app.dependencies.auth import get_current_user
-from pydantic import BaseModel
-from fastapi import APIRouter, Depends
 import os
+import uuid
+from datetime import datetime
+from fastapi import APIRouter, Depends
 import requests
 import gradio as gr
 from dotenv import load_dotenv
-
-# Hugging Face Transformers
 from transformers import AutoModel, AutoTokenizer
-
-# Pinecone for Vector Storage
 from pinecone import Pinecone
+from sqlalchemy.orm import Session
+from models.chat import ChatMessage, ChatSession
+from schemas.chat import OnDemandReqBody, StandardResponse
+from database.connections import get_db
 
-# Important: Import pinecone-client properly
-# Load environment variables from .env file
 load_dotenv()
 
 DATA_PATH = os.getenv("DATA_PATH")
@@ -144,8 +142,7 @@ def process_user_query(user_query: str, conversation_history: list):
 def start_gradio():
     with gr.Blocks() as interface:
         gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
-        gr.Markdown(
-            "Welcome! I'm here to help you learn. Type your question below.")
+        gr.Markdown("Welcome! I'm here to help you learn. Type your question below.")
 
         # State management
         chat_history = gr.State(conversation_history)
@@ -157,8 +154,7 @@ def start_gradio():
                     label="Relevant Context", interactive=False
                 )
 
-        user_input = gr.Textbox(label="Your Question",
-                                placeholder="Type here...")
+        user_input = gr.Textbox(label="Your Question", placeholder="Type here...")
 
         with gr.Row():
             submit_btn = gr.Button("Submit", variant="primary")
@@ -210,23 +206,44 @@ def start_gradio():
     interface.launch(server_name="0.0.0.0", share=True)
 
 
-# Initialize the FastAPI app
-
-# Define the request body
-
-class UserQuery(BaseModel):
-    user_query: str
-
-
 router = APIRouter()
 
 
-class UserQuery(BaseModel):
-    user_query: str
+@router.post("/process", response_model=StandardResponse)
+async def process_query(
+    request: OnDemandReqBody, db: Session = Depends(get_db)
+) -> StandardResponse:
+    # If session_id is not provided, create a new ChatSession
+    if not request.session_id:
+        new_session = ChatSession(
+            id=str(uuid.uuid4()), user_id=request.user_id, created_at=datetime.utcnow()
+        )
+        db.add(new_session)
+        db.commit()
+        db.refresh(new_session)
+        session_id = new_session.id
+    else:
+        session_id = request.session_id
 
+    # Save user message
+    user_message = ChatMessage(
+        session_id=session_id, sender="user", content=request.user_query
+    )
+    db.add(user_message)
+    db.commit()
 
-@router.post("/process")
-async def process_query(query: UserQuery, current_user: dict = Depends(get_current_user)):
-    print(f"current_user", current_user)
-    response = process_user_query(query.user_query, conversation_history)
-    return {"response": response}
+    # Process the user's query
+    response_text = process_user_query(request.user_query, conversation_history=[])
+
+    # Save bot response
+    bot_message = ChatMessage(
+        session_id=session_id, sender="bot", content=response_text
+    )
+    db.add(bot_message)
+    db.commit()
+
+    return StandardResponse(
+        statusCode=200,
+        message="Chat processed successfully",
+        data={"session_id": session_id, "bot_response": response_text},
+    )
