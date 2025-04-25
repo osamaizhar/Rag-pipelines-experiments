@@ -6,7 +6,7 @@ CODE For only chatting with groq inference and gui , upserting code has all been
 import os
 import uuid
 from datetime import datetime
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException, status
 import requests
 import gradio as gr
 from dotenv import load_dotenv
@@ -14,7 +14,12 @@ from transformers import AutoModel, AutoTokenizer
 from pinecone import Pinecone
 from sqlalchemy.orm import Session
 from models.chat import ChatMessage, ChatSession
-from schemas.chat import OnDemandReqBody, StandardResponse
+from schemas.chat import (
+    OnDemandReqBody,
+    StandardResponse,
+    ChatMessageSchema,
+    ChatSessionSchema,
+)
 from database.connections import get_db
 
 load_dotenv()
@@ -208,42 +213,136 @@ def start_gradio():
 
 router = APIRouter()
 
+from starlette.status import HTTP_500_INTERNAL_SERVER_ERROR
+
+
+from fastapi import HTTPException, status
+from sqlalchemy.orm import Session
+from datetime import datetime
+from typing import List
+
 
 @router.post("/process", response_model=StandardResponse)
 async def process_query(
     request: OnDemandReqBody, db: Session = Depends(get_db)
 ) -> StandardResponse:
-    # If session_id is not provided, create a new ChatSession
-    if not request.session_id:
-        new_session = ChatSession(
-            id=str(uuid.uuid4()), user_id=request.user_id, created_at=datetime.utcnow()
+    try:
+        # If session_id is not provided, create a new ChatSession
+        if not request.session_id:
+            new_session = ChatSession(
+                user_id=request.user_id, created_at=datetime.utcnow()
+            )
+            db.add(new_session)
+            db.commit()
+            db.refresh(new_session)
+            session_id = new_session.id
+        else:
+            session_id = request.session_id
+
+        # Save user message
+        user_message = ChatMessage(
+            session_id=session_id, sender="user", content=request.user_query
         )
-        db.add(new_session)
+        db.add(user_message)
         db.commit()
-        db.refresh(new_session)
-        session_id = new_session.id
-    else:
-        session_id = request.session_id
 
-    # Save user message
-    user_message = ChatMessage(
-        session_id=session_id, sender="user", content=request.user_query
-    )
-    db.add(user_message)
-    db.commit()
+        # Process the user's query
+        response_pairs = process_user_query(request.user_query, conversation_history=[])
+        response_text = response_pairs[0][1]
+        print("Response Text:", response_text)
 
-    # Process the user's query
-    response_text = process_user_query(request.user_query, conversation_history=[])
+        # Save bot response
+        bot_message = ChatMessage(
+            session_id=session_id, sender="bot", content=response_text
+        )
+        db.add(bot_message)
+        db.commit()
 
-    # Save bot response
-    bot_message = ChatMessage(
-        session_id=session_id, sender="bot", content=response_text
-    )
-    db.add(bot_message)
-    db.commit()
+        return StandardResponse(
+            statusCode=200,
+            message="Chat processed successfully",
+            data={"session_id": session_id, "bot_response": response_text},
+        )
 
-    return StandardResponse(
-        statusCode=200,
-        message="Chat processed successfully",
-        data={"session_id": session_id, "bot_response": response_text},
-    )
+    except Exception as e:
+        print(f"Internal Server Error: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Internal Server Error",
+        )
+
+
+@router.get("/sessions/{user_id}", response_model=StandardResponse)
+def get_sessions_by_user(
+    user_id: str, db: Session = Depends(get_db)
+) -> StandardResponse:
+    # Validate if user_id is provided
+    if not user_id:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail="User ID must be provided."
+        )
+
+    try:
+        sessions = (
+            db.query(ChatSession)
+            .filter(ChatSession.user_id == user_id)
+            .order_by(ChatSession.created_at.desc())
+            .all()
+        )
+
+        # If no sessions found, return empty array
+        if not sessions:
+            return StandardResponse(
+                statusCode=200, message="No sessions found for the user", data=[]
+            )
+
+        sessions_data = [ChatSessionSchema.model_validate(s) for s in sessions]
+
+        return StandardResponse(
+            statusCode=200, message="Sessions fetched successfully", data=sessions_data
+        )
+
+    except Exception as e:
+        print(f"Error fetching sessions: {e}")
+        return StandardResponse(
+            statusCode=500, message="Internal Server Error", data=None
+        )
+
+
+@router.get("/sessions/{session_id}/messages", response_model=StandardResponse)
+def get_messages_by_session(
+    session_id: str, db: Session = Depends(get_db)
+) -> StandardResponse:
+    # Validate if session_id is provided and is a valid UUID
+    try:
+        uuid.UUID(session_id)  # Check if the session_id is a valid UUID
+    except ValueError:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Session ID must be a valid UUID.",
+        )
+
+    try:
+        messages = (
+            db.query(ChatMessage)
+            .filter(ChatMessage.session_id == session_id)
+            .order_by(ChatMessage.timestamp.desc())
+            .all()
+        )
+
+        # If no messages found, return empty array
+        if not messages:
+            return StandardResponse(
+                statusCode=200, message="No messages found for the session", data=[]
+            )
+
+        message_data = [ChatMessageSchema.model_validate(m) for m in messages]
+
+        return StandardResponse(
+            statusCode=200, message="Messages fetched successfully", data=message_data
+        )
+    except Exception as e:
+        print(f"Error fetching messages: {e}")
+        return StandardResponse(
+            statusCode=500, message="Internal Server Error", data=None
+        )
