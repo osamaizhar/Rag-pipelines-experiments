@@ -1,10 +1,7 @@
 excel parser
 pptx parser (pdf)
 
-fine tuning 
-namespace design planning 
- - each namespace is for one student
-metadata querying ??
-failure based approach functionality
+
+  
 
 frontend for chatbot and for easier testing
