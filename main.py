@@ -8,7 +8,7 @@ from pydantic import BaseModel
 # sys.path.append(parent_dir)
 
 
-from query_llm import process_user_query
+from archive.query_llm import process_user_query
 
 
 
