@@ -22,7 +22,7 @@ class PaginatedStandardResponse(BaseModel):
 
 class OnDemandReqBody(BaseModel):
     user_id: str
-    session_id: Optional[str]
+    session_id: Optional[str] = None
     user_query: str
 
 
