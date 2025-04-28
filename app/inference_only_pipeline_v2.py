@@ -127,7 +127,7 @@ def count_tokens(text: str) -> int:
 
 # --------------------------------------------------------- ## Groq and Gradio with Streaming Enabled -----------------------------------------------------
 # Modified process_user_query to properly yield streaming updates
-@track_time
+#@track_time
 def process_user_query(user_query: str, conversation_history: list):
     print(f"User Query Tokens: {count_tokens(user_query)}")
 
