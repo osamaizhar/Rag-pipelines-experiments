@@ -5,15 +5,25 @@ from uuid import UUID
 
 
 class StandardResponse(BaseModel):
-    statusCode: int
+    status_code: int
     message: str
     data: Optional[Any] = None
 
+class PaginatedStandardResponse(BaseModel):
+    status_code: int
+    message: str
+    data: Optional[Any] = None
+    page: int
+    limit: int
+    total: int
+    last_page: int
+
+
 
 class OnDemandReqBody(BaseModel):
-    user_id: str = Field(..., title="User ID", description="The ID of the user making the request")
-    session_id: Optional[str] = Field(None, title="Session ID", description="The ID of the session (optional)")
-    user_query: str = Field(..., title="User Query", description="The query submitted by the user")
+    user_id: str
+    session_id: Optional[str]
+    user_query: str
 
 
 class FailureStatisticsRequest(BaseModel):
@@ -21,8 +31,6 @@ class FailureStatisticsRequest(BaseModel):
     enrollment_id: str
     item_guid: str
     type: str  # 'quiz' or 'exam'
-
-
 
 
 class ChatMessageSchema(BaseModel):

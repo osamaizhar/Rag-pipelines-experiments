@@ -17,6 +17,7 @@ from models.chat import ChatMessage, ChatSession
 from schemas.chat import (
     OnDemandReqBody,
     StandardResponse,
+    PaginatedStandardResponse,
     ChatMessageSchema,
     ChatSessionSchema,
 )
@@ -265,9 +266,9 @@ async def process_query(
         db.commit()
 
         return StandardResponse(
-            statusCode=200,
-            message="Chat processed successfully",
-            data={"session_id": session_id, "bot_response": response_text},
+            status_code=status.HTTP_200_OK,
+            message="Success",
+            data={"session_id": session_id, "response": response_text},
         )
 
     except Exception as e:
@@ -278,77 +279,102 @@ async def process_query(
         )
 
 
-@router.get("/sessions/{user_id}", response_model=StandardResponse)
+from fastapi import Query
+import math
+
+
+@router.get("/sessions/{user_id}", response_model=PaginatedStandardResponse)
 def get_sessions_by_user(
-    user_id: str, db: Session = Depends(get_db)
+    user_id: str,
+    db: Session = Depends(get_db),
+    page: int = Query(1, ge=1, description="Page number"),
+    limit: int = Query(10, ge=1, le=100, description="Records per page"),
 ) -> StandardResponse:
-    # Validate if user_id is provided
     if not user_id:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST, detail="User ID must be provided."
         )
 
     try:
+        total = db.query(ChatSession).filter(ChatSession.user_id == user_id).count()
         sessions = (
             db.query(ChatSession)
             .filter(ChatSession.user_id == user_id)
             .order_by(ChatSession.created_at.desc())
+            .offset((page - 1) * limit)
+            .limit(limit)
             .all()
         )
 
-        # If no sessions found, return empty array
-        if not sessions:
-            return StandardResponse(
-                statusCode=200, message="No sessions found for the user", data=[]
-            )
-
         sessions_data = [ChatSessionSchema.model_validate(s) for s in sessions]
 
-        return StandardResponse(
-            statusCode=200, message="Sessions fetched successfully", data=sessions_data
+        return PaginatedStandardResponse(
+            status_code=status.HTTP_200_OK,
+            message="Success",
+            data=sessions_data,
+            page=page,
+            limit=limit,
+            total=total,
+            last_page=math.ceil(total / limit) if limit else 1,
         )
 
     except Exception as e:
         print(f"Error fetching sessions: {e}")
-        return StandardResponse(
-            statusCode=500, message="Internal Server Error", data=None
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Internal Server Error",
         )
 
 
-@router.get("/sessions/{session_id}/messages", response_model=StandardResponse)
+@router.get("/sessions/{session_id}/messages", response_model=PaginatedStandardResponse)
 def get_messages_by_session(
-    session_id: str, db: Session = Depends(get_db)
+    session_id: str,
+    db: Session = Depends(get_db),
+    page: int = Query(1, ge=1, description="Page number"),
+    limit: int = Query(10, ge=1, le=1000, description="Records per page"),
 ) -> StandardResponse:
-    # Validate if session_id is provided and is a valid UUID
+
+    if not session_id:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Session ID must be provided.",
+        )
     try:
-        uuid.UUID(session_id)  # Check if the session_id is a valid UUID
-    except ValueError:
+        uuid.UUID(session_id)
+    except ValueError as e:
+        print(f"Error fetching messages: {e}")
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Session ID must be a valid UUID.",
         )
-
     try:
+        total = (
+            db.query(ChatMessage).filter(ChatMessage.session_id == session_id).count()
+        )
         messages = (
             db.query(ChatMessage)
             .filter(ChatMessage.session_id == session_id)
             .order_by(ChatMessage.timestamp.desc())
+            .offset((page - 1) * limit)
+            .limit(limit)
             .all()
         )
 
-        # If no messages found, return empty array
-        if not messages:
-            return StandardResponse(
-                statusCode=200, message="No messages found for the session", data=[]
-            )
-
         message_data = [ChatMessageSchema.model_validate(m) for m in messages]
 
-        return StandardResponse(
-            statusCode=200, message="Messages fetched successfully", data=message_data
+        return PaginatedStandardResponse(
+            status_code=status.HTTP_200_OK,
+            message="Messages fetched successfully",
+            data=message_data,
+            page=page,
+            limit=limit,
+            total=total,
+            last_page=math.ceil(total / limit) if limit else 1,
         )
+
     except Exception as e:
         print(f"Error fetching messages: {e}")
-        return StandardResponse(
-            statusCode=500, message="Internal Server Error", data=None
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Internal Server Error",
         )
