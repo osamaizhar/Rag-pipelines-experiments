@@ -151,8 +151,8 @@ python-json-logger==3.3.0
 python-multipart==0.0.20
 python-pptx==1.0.2
 pytz==2025.2
-pywin32==310
-pywinpty==2.0.15
+# pywin32==310
+# pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.4.0
 referencing==0.36.2
