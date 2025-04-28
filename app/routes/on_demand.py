@@ -36,7 +36,6 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 from typing import List
 
-
 from fastapi import Query
 import math
 
@@ -111,6 +110,51 @@ async def process_query(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Internal Server Error",
         )
+
+
+
+@router.get("/sessions/{user_id}", response_model=PaginatedStandardResponse)
+def get_sessions_by_user(
+    user_id: str,
+    db: Session = Depends(get_db),
+    page: int = Query(1, ge=1, description="Page number"),
+    limit: int = Query(10, ge=1, le=100, description="Records per page"),
+) -> StandardResponse:
+    if not user_id:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST, detail="User ID must be provided."
+        )
+
+    try:
+        total = db.query(ChatSession).filter(ChatSession.user_id == user_id).count()
+        sessions = (
+            db.query(ChatSession)
+            .filter(ChatSession.user_id == user_id)
+            .order_by(ChatSession.created_at.desc())
+            .offset((page - 1) * limit)
+            .limit(limit)
+            .all()
+        )
+
+        sessions_data = [ChatSessionSchema.model_validate(s) for s in sessions]
+
+        return PaginatedStandardResponse(
+            status_code=status.HTTP_200_OK,
+            message="Success",
+            data=sessions_data,
+            page=page,
+            limit=limit,
+            total=total,
+            last_page=math.ceil(total / limit) if limit else 1,
+        )
+
+    except Exception as e:
+        print(f"Error fetching sessions: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Internal Server Error",
+        )
+
 
 
 @router.get("/sessions/{session_id}/messages", response_model=PaginatedStandardResponse)
