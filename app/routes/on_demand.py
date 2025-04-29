@@ -40,18 +40,23 @@ from fastapi import Query
 import math
 
 
-@router.post("/process", response_model=StandardResponse)
+from fastapi.responses import StreamingResponse
+
+from fastapi.responses import StreamingResponse
+from starlette.responses import StreamingResponse as StarletteStreamingResponse
+
+@router.post("/process")
 async def process_query(
     request: OnDemandReqBody, db: Session = Depends(get_db)
-) -> StandardResponse:
+) -> StreamingResponse:
     try:
-        # Check if user_query is missing or empty
         if not request.user_query or not isinstance(request.user_query, str):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="User query is required and must be a string.",
             )
-        # If session_id is not provided, create a new ChatSession
+
+        # Create or fetch session
         if not request.session_id:
             new_session = ChatSession(
                 user_id=request.user_id, created_at=datetime.utcnow()
@@ -70,38 +75,34 @@ async def process_query(
         db.add(user_message)
         db.commit()
 
-        # Process the user's query
+        # Response generator
         response_generator = process_user_query(request.user_query, conversation_history=[])
-        
-        # Iterate through the generator to get the final history
-        final_history = None
-        context = None
-        for history, ctx in response_generator:
-            final_history = history
-            context = ctx
-        
-        # Extract the bot's response from the final history
-        if not final_history or len(final_history) == 0:
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail="No response generated from the query.",
+
+        # Async generator for streaming
+        async def generate():
+            previous = ""
+            bot_full_message = ""
+            for updated_history, context in response_generator:
+                if updated_history:
+                    current_full = updated_history[-1][1]
+                    new_part = current_full[len(previous):]
+                    previous = current_full
+                    bot_full_message = current_full  # Save the final response
+                    if new_part:
+                        yield new_part
+
+            # After stream ends, save bot message
+            bot_message = ChatMessage(
+                session_id=session_id, sender="bot", content=bot_full_message
             )
-        
-        # The last tuple in final_history contains (user_query, bot_response)
-        response_text = final_history[-1][1]  # Get the bot's response
-        print("Response Text:", response_text)
+            db.add(bot_message)
+            db.commit()
 
-        # Save bot response
-        bot_message = ChatMessage(
-            session_id=session_id, sender="bot", content=response_text
-        )
-        db.add(bot_message)
-        db.commit()
-
-        return StandardResponse(
-            status_code=status.HTTP_200_OK,
-            message="Success",
-            data={"session_id": session_id, "response": response_text},
+        # Return streaming response with session_id in headers
+        return StarletteStreamingResponse(
+            generate(),
+            media_type="text/plain",
+            headers={"x-session-id": str(session_id)}
         )
 
     except Exception as e:
@@ -110,7 +111,6 @@ async def process_query(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Internal Server Error",
         )
-
 
 
 @router.get("/sessions/{user_id}", response_model=PaginatedStandardResponse)

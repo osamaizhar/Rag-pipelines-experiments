@@ -8,9 +8,22 @@ from dotenv import load_dotenv
 from database.connections import check_database_connection
 from routes import on_demand
 
+from fastapi.middleware.cors import CORSMiddleware
+
 load_dotenv()
 
 app = FastAPI()
+
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or restrict to your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+    expose_headers=["x-session-id"],
+)
 
 
 @app.on_event("startup")
