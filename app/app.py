@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from dotenv import load_dotenv
 
 from database.connections import check_database_connection
-from routes import on_demand
+from routes import on_demand, failure_driven
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -32,3 +32,4 @@ async def on_startup() -> None:
 
 
 app.include_router(on_demand.router)
+app.include_router(failure_driven.router)

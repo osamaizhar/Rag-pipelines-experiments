@@ -45,6 +45,8 @@ from fastapi.responses import StreamingResponse
 from fastapi.responses import StreamingResponse
 from starlette.responses import StreamingResponse as StarletteStreamingResponse
 
+from fastapi import HTTPException
+
 @router.post("/process")
 async def process_query(
     request: OnDemandReqBody, db: Session = Depends(get_db)
@@ -55,6 +57,15 @@ async def process_query(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 detail="User query is required and must be a string.",
             )
+        
+        if request.session_id:
+            try:
+                uuid.UUID(str(request.session_id))  # Ensure session_id is a valid UUID string
+            except ValueError as e:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Session ID must be a valid UUID.",
+                )
 
         # Create or fetch session
         if not request.session_id:
@@ -87,7 +98,7 @@ async def process_query(
                     current_full = updated_history[-1][1]
                     new_part = current_full[len(previous):]
                     previous = current_full
-                    bot_full_message = current_full  # Save the final response
+                    bot_full_message = current_full 
                     if new_part:
                         yield new_part
 
@@ -98,20 +109,20 @@ async def process_query(
             db.add(bot_message)
             db.commit()
 
-        # Return streaming response with session_id in headers
         return StarletteStreamingResponse(
             generate(),
             media_type="text/plain",
             headers={"x-session-id": str(session_id)}
         )
 
+    except HTTPException as http_exc:
+        raise http_exc  # re-raise HTTP exceptions as-is
     except Exception as e:
         print(f"Internal Server Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Internal Server Error",
         )
-
 
 @router.get("/sessions/{user_id}", response_model=PaginatedStandardResponse)
 def get_sessions_by_user(
