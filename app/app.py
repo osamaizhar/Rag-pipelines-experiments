@@ -15,7 +15,14 @@ app = FastAPI()
 
 @app.on_event("startup")
 async def on_startup() -> None:
-    check_database_connection()
+    # Modified to handle database connection failure
+    try:
+        db_available = check_database_connection()
+        app.state.db_available = db_available
+    except Exception as e:
+        print(f"Error checking database: {e}")
+        app.state.db_available = False
+    print(f"Application starting with database available: {app.state.db_available}")
 
 
 app.include_router(on_demand.router)

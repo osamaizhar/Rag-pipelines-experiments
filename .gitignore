@@ -1,3 +1,26 @@
 .env
 *.pem
 venv
+
+# Python cache files
+*.py[cod]
+*$py.class
+.pyc
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual environments
+env/
+venv/
+ENV/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo

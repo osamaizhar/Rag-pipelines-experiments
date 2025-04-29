@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any, Optional, Dict
 from pydantic import BaseModel, Field, field_validator
 from datetime import datetime
 from uuid import UUID
@@ -52,3 +52,13 @@ class ChatSessionSchema(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+# Add the missing StreamingResponseSchema
+class StreamingResponseSchema(BaseModel):
+    """Schema for streaming response data chunks"""
+    type: str = "chunk"  # "chunk" or "complete"
+    data: Optional[str] = None  # The new text chunk
+    full_response: Optional[str] = None  # The complete response so far
+    message_id: Optional[str] = None  # ID of the message in the database
+    session_id: Optional[str] = None  # ID of the chat session
