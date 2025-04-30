@@ -1,5 +1,13 @@
 import sys
 import os
+
+from fastapi.exceptions import RequestValidationError, HTTPException
+
+from app.utils.exceptions.handlers import (
+    http_exception_handler,
+    validation_exception_handler,
+)
+
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from fastapi import FastAPI
@@ -14,7 +22,8 @@ load_dotenv()
 
 app = FastAPI()
 
-
+app.add_exception_handler(RequestValidationError, validation_exception_handler)
+app.add_exception_handler(HTTPException, http_exception_handler)
 
 app.add_middleware(
     CORSMiddleware,
