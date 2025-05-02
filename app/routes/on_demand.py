@@ -72,6 +72,15 @@ async def process_query(
                     detail="Session not found.",
                 )
             session_id = session.id
+            messages = (
+            db.query(ChatMessage)
+            .filter(ChatMessage.session_id == session_id)
+            .order_by(ChatMessage.timestamp.desc())
+            .limit(10)
+            .all()
+            )
+
+            message_data = [ChatMessageSchema.model_validate(m) for m in messages]
         else:
             new_session = ChatSession(
                 user_id=request.user_id, created_at=datetime.utcnow()

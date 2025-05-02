@@ -1,9 +1,11 @@
 import uuid
-from fastapi import APIRouter, HTTPException, status
+from fastapi import Header, APIRouter, HTTPException, status
 from pydantic import BaseModel, validator
 from typing import Literal, Dict, Any, Optional
 from datetime import datetime
 import requests
+import json
+from inference_only_pipeline_v2 import process_user_query
 
 router = APIRouter()
 
@@ -23,30 +25,84 @@ class ThresholdRequest(BaseModel):
 
 
 # --- Helper Functions ---
-def fetch_quiz_statistics(enrollment_id: str, item_guid: str) -> Dict[str, Any]:
-    """Simulate fetching quiz statistics from external API."""
-    url = "https://qa-app.healthtechacademy.org/LS360ApiGateway/services/rest/global-switch/player/getQuizAssessmentStatistics"
-    payload = {"enrollmentId": enrollment_id, "contentObjectGuid": item_guid}
+def fetch_quiz_statistics(
+    enrollment_id: str, item_guid: str, token: str
+) -> Dict[str, Any]:
+    """Fetch quiz statistics from external API."""
+    url = "https://qa-app.healthtechacademy.org/LS360ApiGateway/services/rest/switch/GET_ASSESSMENT_STATISTICS"
+
+    payload = {
+        "assessment_type": "QuizAssessmentResultStatistic",
+        "enrollment_id": enrollment_id,
+        "item_guid": item_guid,
+    }
+
+    headers = {
+        "Authorization": token,
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    }
+
     try:
-        response = requests.post(url, json=payload)
+        response = requests.post(
+            url, json={"json": json.dumps(payload)}, headers=headers
+        )
         response.raise_for_status()
-        return response.json()
+        raw_data = response.json()
+
+        data = json.loads(raw_data)
+
+        if isinstance(data, list) and data:
+            last_attempt = data[-1]
+            total_attempts = len(data)
+            total_failed_attempts = sum(
+                1
+                for attempt in data
+                if not attempt.get("ACHIEVEDASSESSMENTMASTERYTF", True)
+            )
+
+            last_attempt["TOTALATTEMPTS"] = total_attempts
+            last_attempt["TOTALFAILEDATTEMPTS"] = total_failed_attempts
+
+            return last_attempt
+
+        print(f"Unexpected or empty response format: {data}")
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail="No quiz statistics found."
+        )
     except requests.RequestException as e:
+        print(f"Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to fetch quiz statistics: {str(e)}",
         )
 
 
-def fetch_quiz_details(enrollment_id: str, item_guid: str) -> Dict[str, Any]:
+def fetch_quiz_details(learner_static_id: str, token: str) -> Dict[str, Any]:
     """Simulate fetching quiz details (questions/answers) from external API."""
-    # Example based on 3rd image
-    url = f"https://api.example.com/quiz/details?enrollment_id={enrollment_id}&item_guid={item_guid}"
+
+    url = f"https://qa-app.healthtechacademy.org/LS360ApiGateway/services/rest/switch/GET_ASSESSMENT_ATTEMPTED_FOR_REVIEW"
+
+    payload = {
+        "LEARNERSTATISTIC_ID": learner_static_id,
+    }
+
+    headers = {
+        "Authorization": token,
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    }
     try:
-        response = requests.get(url)
+        response = requests.post(
+            url, json={"json": json.dumps(payload)}, headers=headers
+        )
         response.raise_for_status()
-        return response.json()
+        raw_data = response.json()
+        data = json.loads(raw_data)
+        print(f"Response from quiz details API: {data}")
+        return data
     except requests.RequestException as e:
+        print(f"Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to fetch quiz details: {str(e)}",
@@ -60,8 +116,11 @@ def fetch_exam_statistics(enrollment_id: str, item_guid: str) -> Dict[str, Any]:
     try:
         response = requests.get(url)
         response.raise_for_status()
+        print(f"Response from exam statistics API: {response.json()}")
         return response.json()
+
     except requests.RequestException as e:
+        print(f"Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to fetch exam statistics: {str(e)}",
@@ -77,6 +136,7 @@ def fetch_exam_details(enrollment_id: str, item_guid: str) -> Dict[str, Any]:
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
+        print(f"Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to fetch exam details: {str(e)}",
@@ -86,119 +146,174 @@ def fetch_exam_details(enrollment_id: str, item_guid: str) -> Dict[str, Any]:
 def evaluate_thresholds(
     data: Dict[str, Any], details: Dict[str, Any], type: str
 ) -> Dict[str, Any]:
-    """Evaluate the fetched data against thresholds and provide feedback."""
-    feedback = {"issues": [], "suggestions": [], "details": []}
+    """Generate a warm and analytical feedback prompt for the LLM."""
 
-    # Extract relevant metrics from API response
-    failed_attempts = data.get("ATTEMPTNUMBER", 0)
-    score = (
-        data.get("RAWSCORE", 0.0) / data.get("TOTALQUESTIONSCORRECT", 1) * 100
-    )  # Convert to percentage
-    time_spent = data.get(
-        "TOTALQUESTIONSCORRECTATTHEENDOFTHEASSESSMENT", 0
-    )  # Assuming this is time in minutes
+    total_attempts = data.get("TOTALATTEMPTS", 0)
+    failed_attempts = data.get("TOTALFAILEDATTEMPTS", 0)
+    score = data.get("RAWSCORE", 0.0)
+    questions_correct = data.get("TOTALQUESTIONSCORRECT", 0)
+    questions_incorrect = data.get("TOTALQUESTIONSINCORRECT", 0)
+    total_questions = questions_correct + questions_incorrect
+    time_spent = data.get("TOTALQUESTIONSCORRECTATTHEENDOFTHEASSESSMENT", 30)
 
-    # Thresholds from the first image
+    thresholds_info = []
     if type == "quiz":
-        # Quiz Failed Attempts (>= 2)
         if failed_attempts >= 2:
-            feedback["issues"].append(
-                f"Failed quiz attempts: {failed_attempts} (threshold >= 2)"
+            thresholds_info.append(
+                "Student attempted this quiz multiple times, which indicates some difficulty grasping the material."
             )
-            feedback["suggestions"].append(
-                "Most students have 0 failed attempts. Review the material thoroughly before attempting again."
-            )
-
-        # Low Average Quiz Score (< 60%)
         if score < 60:
-            feedback["issues"].append(f"Low quiz score: {score:.2f}% (threshold < 60%)")
-            feedback["suggestions"].append(
-                "Below 60% suggests serious comprehension issues. Focus on understanding key concepts and revisit the lessons."
+            thresholds_info.append(
+                "Student's score was below 60%, suggesting a need for further review."
             )
-
-        # Time Spent on Lesson (< 30 minutes)
         if time_spent < 30:
-            feedback["issues"].append(
-                f"Time spent on lesson: {time_spent} minutes (threshold < 30 minutes)"
+            thresholds_info.append(
+                "Student spent relatively little time on this quiz, which may have impacted performance."
             )
-            feedback["suggestions"].append(
-                "AI flags the lesson as possibly skimmed. Spend more time engaging with the content."
-            )
-
     elif type == "exam":
-        # Exam Failed Attempts (>= 1)
         if failed_attempts >= 1:
-            feedback["issues"].append(
-                f"Failed exam attempts: {failed_attempts} (threshold >= 1)"
+            thresholds_info.append(
+                "Student re-attempted the exam, possibly indicating areas that were unclear."
             )
-            feedback["suggestions"].append(
-                "Fewer students fail exams. Even 1 failure should initiate coaching. Consider scheduling a session with an instructor."
-            )
-
-        # Low Average Exam Score (< 60%)
         if score < 60:
-            feedback["issues"].append(f"Low exam score: {score:.2f}% (threshold < 60%)")
-            feedback["suggestions"].append(
-                "Consistent with quiz logic: Below 60% indicates comprehension issues. Review core topics and seek clarification."
+            thresholds_info.append(
+                "Student's exam score was below 60%, which is below the expected level."
+            )
+        if time_spent < 120:
+            thresholds_info.append(
+                "Student spent less than 2 hours on the exam, which might suggest rushing or lack of focus."
             )
 
-        # Time Spent on Course (< 2 hours)
-        if time_spent < 120:  # Convert 2 hours to minutes
-            feedback["issues"].append(
-                f"Time spent on course: {time_spent} minutes (threshold < 120 minutes)"
-            )
-            feedback["suggestions"].append(
-                "AI flags the course as completed too quickly. Dedicate more time to each section for better retention."
-            )
-
-    # Analyze correct/incorrect answers from details
-    for question in details.get("questions", []):
-        question_text = question.get("QUESTIONTEXT", "Unknown question")
-        is_correct = question.get("ISCORRECT", False)
-        correct_answer = question.get("ANSWER", "N/A")
-        user_answer = question.get("USERANSWER", "N/A")
-
-        feedback["details"].append(
-            {
-                "question": question_text,
-                "is_correct": is_correct,
-                "correct_answer": correct_answer,
-                "user_answer": user_answer,
-            }
+    # Process questions
+    questions_feedback = []
+    incorrect_summary = []
+    questions = details if isinstance(details, list) else details.get("questions", [])
+    for idx, question in enumerate(questions, 1):
+        is_correct = question.get("ANSWEREDCORRECTLY", False)
+        question_text = question.get("QUESTIONSTEM", "Question")
+        question_type = question.get("QUESTIONTYPE", "N/A")
+        user_answer = question.get("ANSWER_SELECTED", "N/A")
+        correct_answer = next(
+            (
+                a["label"]
+                for a in question.get("ASSESSMENTITEMANSWER", [])
+                if a.get("ISCORRECTTF")
+            ),
+            "Not provided",
         )
+
         if not is_correct:
-            feedback["suggestions"].append(
-                f"Review the concept related to: '{question_text}'. Correct answer: {correct_answer}"
+            questions_feedback.append(
+                f'{idx}. "{question_text}"\n'
+                f"   - Your Answer: {user_answer}\n"
+                f"   - Correct Answer: {correct_answer}\n"
+                f"   - Question Type: {question_type}\n"
+            )
+            incorrect_summary.append(
+                {
+                    "question": question_text,
+                    "your_answer": user_answer,
+                    "correct_answer": correct_answer,
+                }
             )
 
-    return feedback
+    intro = (
+        f"Hello! Please act like a friendly tutor. Based on the student's performance below, analyze their weaknesses and give helpful, topic-specific guidance.\n"
+        f"Include:\n"
+        f"- Areas to focus on\n"
+        f"- Slides or course topics to revisit\n"
+        f"- Friendly encouragement\n\n"
+        f"Respond conversationally and avoid repeating raw stats.\n\n"
+        f"---\n\n"
+        f"Student recently attempted a **{type}**. Here's their performance breakdown:\n\n"
+    )
+
+    performance_summary = f"**Summary:**\n- Score: {score:.2f}%\n- Time Spent: {time_spent} minutes\n- Questions Correctly Answered: {questions_correct}\n- Questions Incorrectly Answered: {questions_incorrect}\n- Total Questions: {total_questions}\n- Attempt No.: {total_attempts}\n\n"
+
+    thresholds_section = (
+        "**Observations:**\n"
+        + "\n".join(f"- {item}" for item in thresholds_info)
+        + "\n"
+        if thresholds_info
+        else ""
+    )
+
+    questions_section = (
+        "**Incorrect Questions:**\n" + "\n".join(questions_feedback) + "\n"
+        if questions_feedback
+        else "All questions answered correctly. 🎉"
+    )
+
+    llm_query = intro + performance_summary + thresholds_section + questions_section
+
+    return {
+        "llm_query": llm_query,
+        "data": {
+            "score": score,
+            "time_spent": time_spent,
+            "attempts": failed_attempts,
+            "incorrect_questions": incorrect_summary,
+        },
+    }
 
 
 # --- API Endpoint ---
+from fastapi import Depends
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi.responses import StreamingResponse
+from starlette.responses import StreamingResponse as StarletteStreamingResponse
+
+security = HTTPBearer()
+
+
 @router.post("/evaluate-thresholds", response_model=StandardResponse)
-async def evaluate_thresholds(request: ThresholdRequest):
+async def get_feedback(
+    request: ThresholdRequest,
+    credentials: HTTPAuthorizationCredentials = Depends(security),
+) -> StreamingResponse:
     try:
+        token = credentials.credentials
+        print(f"Token received: {token}")
         # Fetch data based on type (quiz or exam)
         if request.type == "quiz":
-            stats = fetch_quiz_statistics(request.enrollment_id, request.item_guid)
-            details = fetch_quiz_details(request.enrollment_id, request.item_guid)
+            stats = fetch_quiz_statistics(
+                request.enrollment_id, request.item_guid, token
+            )
+            details = fetch_quiz_details(stats["ID"], token)
         else:  # exam
             stats = fetch_exam_statistics(request.enrollment_id, request.item_guid)
             details = fetch_exam_details(request.enrollment_id, request.item_guid)
 
         # Evaluate against thresholds
-        feedback = evaluate_thresholds(stats, details, request.type)
-
-        return StandardResponse(
-            success=True,
-            message="Threshold evaluation completed successfully",
-            data=feedback,
+        feedbackQuery = evaluate_thresholds(stats, details, request.type)
+        print(f"Feedback query: {feedbackQuery["llm_query"]}")
+        response_generator = process_user_query(
+            feedbackQuery["llm_query"], conversation_history=[]
         )
 
-    except HTTPException as e:
-        raise e
+        async def generate():
+            previous = ""
+            bot_full_message = ""
+            for updated_history, context in response_generator:
+                if updated_history:
+                    current_full = updated_history[-1][1]
+                    new_part = current_full[len(previous) :]
+                    previous = current_full
+                    bot_full_message = current_full
+                    if new_part:
+                        yield new_part
+
+        return StarletteStreamingResponse(
+            generate(),
+            media_type="text/plain",
+            # headers={"x-session-id": str(session_id)},
+        )
+
+    except HTTPException as http_exc:
+        raise http_exc
     except Exception as e:
+        print(f"Internal Server Error: {e}")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Internal Server Error: {str(e)}",
+            detail="Internal Server Error",
         )
