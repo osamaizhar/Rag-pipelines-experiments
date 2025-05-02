@@ -11,7 +11,7 @@ import gradio as gr
 from dotenv import load_dotenv
 from sqlalchemy.orm import Session
 from models.chat import ChatMessage, ChatSession
-from inference_only_pipeline_v2 import process_user_query
+from on_demand_coaching_beta_v1 import process_user_query
 from schemas.chat import (
     OnDemandReqBody,
     StandardResponse,

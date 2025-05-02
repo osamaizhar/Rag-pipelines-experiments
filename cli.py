@@ -23,7 +23,7 @@ def dev():
 @cli.command()
 def gradio():
     """Launch the Gradio chatbot interface."""
-    uvicorn.run("app.inference_only_pipeline_v2:main", host="0.0.0.0", port=GRADIO_PORT, reload=True)
+    uvicorn.run("app.on_demand_coaching_beta_v1:main", host="0.0.0.0", port=GRADIO_PORT, reload=True)
 
 if __name__ == "__main__":
     cli()
