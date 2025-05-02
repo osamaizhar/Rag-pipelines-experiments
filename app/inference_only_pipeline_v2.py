@@ -1,11 +1,10 @@
-'''
+"""
 Changelog:
 - Updated Embeddings Function nvidia/nv-embed-v1
 - Optimized Code for fastest performance
-- Made changes and optimizatinons to main inference function 
+- Made changes and optimizatinons to main inference function
 - Using paid apis now
-'''
-
+"""
 
 import gradio as gr
 import os
@@ -61,12 +60,13 @@ def track_time(func):
 
     return wrapper
 
+
 pc = Pinecone(api_key=PINECONE_API)
 
 index = pc.Index("surgical-tech-complete")  # -- COMPLETE SURGICAL TECH BOOTCAMP
 
 
-#@track_time
+# @track_time
 def get_embedding(text="None"):
     response = client.embeddings.create(
         input=text,
@@ -79,21 +79,24 @@ def get_embedding(text="None"):
     # print(count_tokens(response.data[0].embedding))
     return response.data[0].embedding
 
+
 get_embedding("None")
 
 # Function to query Pinecone index using embeddings
 
-#@track_time
+
+# @track_time
 def query_pinecone(embedding):
     # Use keyword arguments to pass the embedding and other parameters
     result = index.query(vector=embedding, top_k=5, include_metadata=True)
     return result["matches"]
 
-#print(query_pinecone(get_embedding("Pediatric surgery definition")))
+
+# print(query_pinecone(get_embedding("Pediatric surgery definition")))
 
 
 #  ------------------------ Modified query_groq function with more explicit streaming handling --------------------------------
-#@track_time
+# @track_time
 def query_groq(prompt):
     client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
@@ -117,17 +120,16 @@ Putting tokenizer outside of the function to avoid reinitialization and optimize
 tokenizer = AutoTokenizer.from_pretrained("jinaai/jina-embeddings-v2-base-en")
 
 
-#@track_time
+# @track_time
 def count_tokens(text: str) -> int:
     # Encode the text into tokens
     tokens = tokenizer.encode(text)
     return len(tokens)
 
 
-
 # --------------------------------------------------------- ## Groq and Gradio with Streaming Enabled -----------------------------------------------------
 # Modified process_user_query to properly yield streaming updates
-#@track_time
+# @track_time
 def process_user_query(user_query: str, conversation_history: list):
     print(f"User Query Tokens: {count_tokens(user_query)}")
 
@@ -199,7 +201,7 @@ def process_user_query(user_query: str, conversation_history: list):
     yield final_history, context
 
 
-#@track_time
+# @track_time
 def create_gradio_interface(conversation_history):
     with gr.Blocks() as interface:
         gr.Markdown("# 🧑‍🏫 AI Coaching Assistant")
@@ -260,6 +262,7 @@ def create_gradio_interface(conversation_history):
 
     return interface
 
+
 def main():
     """
     Main entry point for the application.
@@ -273,7 +276,7 @@ def main():
 
     # Create and launch the interface
     interface = create_gradio_interface(initial_conversation_history)
-    interface.launch(share=True)
+    interface.launch(server_name="0.0.0.0", share=True)
 
 
 if __name__ == "__main__":

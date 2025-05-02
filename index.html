@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>On Demand AI Coach Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .chat-box {
+      max-height: 500px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    .user-message {
+      background-color: #e0f2fe;
+      border-radius: 10px 10px 0 10px;
+      max-width: 80%;
+      margin-left: auto;
+    }
+    .bot-message {
+      background-color: #f3f4f6;
+      border-radius: 10px 10px 10px 0;
+      max-width: 80%;
+    }
+    .error-message {
+      background-color: #fee2e2;
+      border-radius: 10px;
+      max-width: 80%;
+    }
+    #chatBox::-webkit-scrollbar {
+      width: 8px;
+    }
+    #chatBox::-webkit-scrollbar-thumb {
+      background-color: #9ca3af;
+      border-radius: 4px;
+    }
+    #chatBox::-webkit-scrollbar-track {
+      background-color: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-2xl bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-2xl font-bold text-gray-800 mb-4">On Demand AI Coach Chatbot</h1>
+    
+    <!-- Chat Box -->
+    <div id="chatBox" class="chat-box bg-gray-50 p-4 rounded-lg mb-4 border border-gray-200"></div>
+    
+    <!-- Input Form -->
+    <div class="space-y-4">
+      <div>
+        <label for="userIdInput" class="block text-sm font-medium text-gray-700">User ID</label>
+        <input
+          type="text"
+          id="userIdInput"
+          value="st2__testaccount04@domain.com"
+          placeholder="Enter user ID (e.g., email)"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
+        />
+      </div>
+      <div>
+        <label for="sessionIdInput" class="block text-sm font-medium text-gray-700">Session ID (optional)</label>
+        <input
+          type="text"
+          id="sessionIdInput"
+          placeholder="Enter session ID or leave blank"
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
+        />
+      </div>
+      <div>
+        <label for="queryInput" class="block text-sm font-medium text-gray-700">Your Question</label>
+        <input
+          type="text"
+          id="queryInput"
+          placeholder="Ask something..."
+          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
+        />
+      </div>
+      <button
+        id="sendButton"
+        class="w-full bg-blue-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:bg-gray-400"
+      >
+        Send
+      </button>
+    </div>
+  </div>
+
+  <script>
+    console.log("Script loaded"); // Debug script loading
+
+    async function sendQuery() {
+      console.log("sendQuery called"); // Debug function call
+      const userIdInput = document.getElementById("userIdInput");
+      const sessionIdInput = document.getElementById("sessionIdInput");
+      const queryInput = document.getElementById("queryInput");
+      const sendButton = document.getElementById("sendButton");
+      const chatBox = document.getElementById("chatBox");
+
+      const userId = userIdInput.value.trim();
+      const sessionId = sessionIdInput.value.trim();
+      const query = queryInput.value.trim();
+
+      // Validate inputs
+      if (!userId) {
+        showError("Please enter a user ID.");
+        return;
+      }
+      if (!query) {
+        showError("Please enter a question.");
+        return;
+      }
+
+      // Disable button and show loading
+      sendButton.disabled = true;
+      sendButton.textContent = "Sending...";
+
+      // Show user message
+      const userMsg = document.createElement("div");
+      userMsg.className = "user-message p-3 m-2";
+      userMsg.textContent = query;
+      chatBox.appendChild(userMsg);
+      scrollToBottom();
+
+      // Prepare bot message
+      const botMsg = document.createElement("div");
+      botMsg.className = "bot-message p-3 m-2";
+      botMsg.textContent = "Bot is typing...";
+      chatBox.appendChild(botMsg);
+      scrollToBottom();
+
+      // Clear query input
+      queryInput.value = "";
+
+      try {
+        const response = await fetch("http://52.206.14.83:8004/process", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "text/event-stream"
+          },
+          body: JSON.stringify({
+            user_query: query,
+            user_id: userId,
+            session_id: sessionId ? parseInt(sessionId, 10) : null
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        // Capture x-session-id header
+        console.log(response.headers)
+        const sessionIdFromHeader = response.headers.get("x-session-id");
+        console.log("x-session-id:", sessionIdFromHeader); // Debug header
+        if (sessionIdFromHeader && sessionIdFromHeader !== "null" && !sessionIdInput.value) {
+          sessionIdInput.value = sessionIdFromHeader; // Set as default after first query
+        } else if (!sessionIdFromHeader || sessionIdFromHeader === "null") {
+          console.warn("No valid x-session-id received:", sessionIdFromHeader);
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        botMsg.textContent = ""; // Clear typing indicator
+
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          console.log("Received chunk:", chunk); // Debug raw chunk
+          // Skip unwanted session_id null chunk
+          if (chunk.trim() !== "session_id null") {
+            botMsg.textContent += chunk;
+            scrollToBottom();
+          }
+        }
+      } catch (error) {
+        showError(`Failed to fetch response: ${error.message}`);
+      } finally {
+        sendButton.disabled = false;
+        sendButton.textContent = "Send";
+      }
+    }
+
+    function showError(message) {
+      const chatBox = document.getElementById("chatBox");
+      const errorMsg = document.createElement("div");
+      errorMsg.className = "error-message p-3 m-2 text-red-700";
+      errorMsg.textContent = `Error: ${message}`;
+      chatBox.appendChild(errorMsg);
+      scrollToBottom();
+    }
+
+    function scrollToBottom() {
+      const chatBox = document.getElementById("chatBox");
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // Attach event listeners
+    document.getElementById("sendButton").addEventListener("click", sendQuery);
+    document.getElementById("queryInput").addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        sendQuery();
+      }
+    });
+  </script>
+</body>
+</html>

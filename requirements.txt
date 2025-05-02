@@ -1,6 +1,7 @@
 aiofiles==24.1.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.11.16
+aiolimiter==1.2.1
 aiosignal==1.3.2
 alembic==1.15.2
 altair==5.5.0
@@ -97,6 +98,7 @@ matplotlib-inline==0.1.7
 mccabe==0.7.0
 mdurl==0.1.2
 mistune==3.1.3
+mmh3==3.1.0
 mpmath==1.3.0
 multidict==6.4.3
 mypy-extensions==1.0.0
@@ -107,10 +109,12 @@ nbformat==5.10.4
 nbimporter==0.3.4
 nest-asyncio==1.6.0
 networkx==3.4.2
+nltk==3.9.1
 notebook==7.4.0
 notebook_shim==0.2.4
 numpy==2.2.5
 openpyxl==3.1.5
+openai
 orjson==3.10.16
 overrides==7.7.0
 packaging==24.2
@@ -120,6 +124,7 @@ parso==0.8.4
 pillow==11.2.1
 pinecone==6.0.2
 pinecone-plugin-interface==0.0.7
+pinecone-text==0.5.4
 platformdirs==4.3.7
 prometheus_client==0.21.1
 prompt_toolkit==3.0.51
@@ -199,65 +204,15 @@ tzdata==2025.2
 uri-template==1.3.0
 urllib3==2.4.0
 uvicorn==0.34.2
+voyageai==0.2.4
 watchdog==6.0.0
 wcwidth==0.2.13
 webcolors==24.11.1
 webencodings==0.5.1
 websocket-client==1.8.0
 websockets==15.0.1
+wget==3.2
 widgetsnbextension==4.0.14
 XlsxWriter==3.2.3
 yarl==1.20.0
 zstandard==0.23.0
-
-# langchain
-# langchain-text-splitters
-# langchain-community
-# langchain-core
-# python-dotenv
-# pinecone
-# requests
-# PyPDF2
-# numpy
-# tqdm
-# torch
-# transformers
-# sentence-transformers
-# groq
-# pypdf
-# streamlit
-# import_ipynb
-# jupyter
-
-langchain>=0.2.0  # Ensure compatibility with the latest updates
-langchain-text-splitters
-langchain_community>=0.2.0  # Corrected to use the new loader module
-langchain-core
-python-dotenv
-pinecone
-requests
-PyPDF2
-numpy
-tqdm
-torch
-transformers
-sentence-transformers
-groq
-pypdf
-streamlit
-import_ipynb
-jupyter
-python-pptx
-ipykernel
-fastapi 
-uvicorn
-nbimporter
-importnb
-tika
-gradio
-openpyxl
-voyageai
-pinecone_text
-# tkhtmlview
-# markdown 
-# PySimpleGUI

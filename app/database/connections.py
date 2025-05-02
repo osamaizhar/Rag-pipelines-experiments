@@ -2,6 +2,8 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 from dotenv import load_dotenv
 import os
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+
 load_dotenv()
 
 DB_HOST = os.getenv("DB_HOST")
@@ -11,6 +13,10 @@ DB_PASS = os.getenv("DB_PASS")
 DB_NAME = os.getenv("DB_NAME")
 
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+ASYNC_DATABASE_URL = (
+    f"postgresql+asyncpg://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+)
+
 
 # Create engine
 engine = create_engine(DATABASE_URL)
@@ -27,6 +33,18 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+asyncEngine = create_async_engine(ASYNC_DATABASE_URL, echo=True)
+AsyncSessionLocal = sessionmaker(
+    asyncEngine, class_=AsyncSession, expire_on_commit=False
+)
+
+
+# Dependency to get async DB session
+async def get_async_db():
+    async with AsyncSessionLocal() as session:
+        yield session
 
 
 # Function to check the database connection
