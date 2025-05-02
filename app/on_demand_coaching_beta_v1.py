@@ -271,7 +271,7 @@ def main():
 
     # Create and launch the interface
     interface = create_gradio_interface(initial_conversation_history)
-    interface.launch(share=True)
+    interface.launch(server_name="0.0.0.0", share=True)
 
 
 if __name__ == "__main__":
