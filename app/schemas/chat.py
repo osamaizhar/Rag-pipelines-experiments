@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any, Optional, Literal
 from pydantic import BaseModel, Field, field_validator
 from datetime import datetime
 from uuid import UUID
@@ -8,6 +8,7 @@ class StandardResponse(BaseModel):
     status_code: int
     message: str
     data: Optional[Any] = None
+
 
 class PaginatedStandardResponse(BaseModel):
     status_code: int
@@ -19,7 +20,6 @@ class PaginatedStandardResponse(BaseModel):
     last_page: int
 
 
-
 class OnDemandReqBody(BaseModel):
     user_id: str
     session_id: Optional[str] = None
@@ -28,9 +28,9 @@ class OnDemandReqBody(BaseModel):
 
 class FailureStatisticsRequest(BaseModel):
     token: str
-    enrollment_id: str
-    item_guid: str
-    type: str  # 'quiz' or 'exam'
+    enrollment_id: Optional[str] = None
+    item_guid: Optional[str] = None
+    type: Literal["quiz", "exam"]
 
 
 class ChatMessageSchema(BaseModel):

@@ -40,6 +40,10 @@ async def process_query(
 ) -> StreamingResponse:
     try:
         start_time = time.perf_counter()
+        if not request.user_id.strip():
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST, detail="User ID must be provided."
+            )
         if not request.user_query.strip():
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
@@ -73,11 +77,11 @@ async def process_query(
                 )
             session_id = session.id
             messages = (
-            db.query(ChatMessage)
-            .filter(ChatMessage.session_id == session_id)
-            .order_by(ChatMessage.timestamp.desc())
-            .limit(10)
-            .all()
+                db.query(ChatMessage)
+                .filter(ChatMessage.session_id == session_id)
+                .order_by(ChatMessage.timestamp.desc())
+                .limit(10)
+                .all()
             )
 
             message_data = [ChatMessageSchema.model_validate(m) for m in messages]
