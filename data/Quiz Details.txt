@@ -1,0 +1,1352 @@
+[
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794372,
+        "label": "left ventricle",
+        "value": "left ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "45c70b0737054f00b8874f4c95552b53",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794373,
+        "label": "right atrium",
+        "value": "right atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8bae9922c5904379bf4844d6f933d54d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794374,
+        "label": "right ventricle",
+        "value": "right ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "3d9dde6210704da08024b1fa40d3d76a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794375,
+        "label": "right ventricle",
+        "value": "right ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "839c854dac4e457daf0f046882364958",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Pumps blood low in oxygen to the pulmonary circulation",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "right ventricle",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "18e1f6a69a574df6ad3998bd757279cd",
+    "ASSESSMENTITEMANSWERGUID": "839c854dac4e457daf0f046882364958",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794416,
+        "label": "pulmonary circulation",
+        "value": "pulmonary circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "7d50700a4ae04f1eb75624fabb1c406c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794417,
+        "label": "systemic circulation",
+        "value": "systemic circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "384df84e9bbc4ab4be7805fdb09722f5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794418,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "afa398079b064ce48e226525e1826f26",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794419,
+        "label": "cardiqc cycle",
+        "value": "cardiqc cycle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "47f6d04ccb5a4cb8a01854b35fa10387",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Transportation of blood to and from the lungs is called",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pulmonary circulation",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "b45aaf4dd30743b5b8c59cf40fc651d9",
+    "ASSESSMENTITEMANSWERGUID": "7d50700a4ae04f1eb75624fabb1c406c",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794392,
+        "label": "right coronary artery",
+        "value": "right coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e4a62fb20e52412391188f8be5ff5fbc",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794393,
+        "label": "left coronary artery",
+        "value": "left coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "00736f937f2f42b7a2034264f4599b41",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794394,
+        "label": "anterior descending artery",
+        "value": "anterior descending artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d5b172a1b6d24e77a0eb26746ef0aa46",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The anterior descending and circumflex are branches of this vessel",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "left coronary artery",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "838b5d95b17e4f89b033ed7a8d588b91",
+    "ASSESSMENTITEMANSWERGUID": "00736f937f2f42b7a2034264f4599b41",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794348,
+        "label": "inotropy",
+        "value": "inotropy",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f05ee387e12e4eaf9492018e0cf24482",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794349,
+        "label": "diastole",
+        "value": "diastole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b7271638855047bca527070679966051",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794350,
+        "label": "chronotropy",
+        "value": "chronotropy",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "9c0bc8e62b284f50a04378ad381220c5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794351,
+        "label": "asystole",
+        "value": "asystole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5d82e6ec7e7e43d69de41050b08ca286",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Term that refers to a change in rate",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "chronotropy",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "b61332b5dc0d4de9bab48a9cdfd866b1",
+    "ASSESSMENTITEMANSWERGUID": "9c0bc8e62b284f50a04378ad381220c5",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794424,
+        "label": "systole",
+        "value": "systole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "821f0e35a69a4a2e87be05adf4f0ac65",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794425,
+        "label": "Cardiac output",
+        "value": "Cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "11d92c361575413fad3d0ecc60a4acc8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794426,
+        "label": "diastole",
+        "value": "diastole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "847bea76501349ff881ee9ad7e7e4002",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794427,
+        "label": "cardiac cycle",
+        "value": "cardiac cycle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d47ff586d80a4a80b7390c397b50517e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The phase of the cardiac cycle when the heart is expanding and refilling; also known as the relaxation phase",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "diastole",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "fdb5a5ec2f4845feab8983e35acf712a",
+    "ASSESSMENTITEMANSWERGUID": "847bea76501349ff881ee9ad7e7e4002",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794420,
+        "label": "diastole",
+        "value": "diastole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e28d72e507e741f28c6b2fec782b5ee6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794421,
+        "label": "sytole",
+        "value": "sytole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "f902eb847b4143c28570628cebd9201e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794422,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b8525136189c4441b7bdfc0ee86857c4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794423,
+        "label": "cardiac cycle",
+        "value": "cardiac cycle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1c5bcd78c03f4835a175f1850f509390",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Contraction phase of the cardiac cycle, when the heart is pumping blood out to the body",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "sytole",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "622b4a515e514ff2b9d5531db8475826",
+    "ASSESSMENTITEMANSWERGUID": "f902eb847b4143c28570628cebd9201e",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794364,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1db43849e3aa4025b0f3a1aea4fb30bc",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794365,
+        "label": "pulse pressure",
+        "value": "pulse pressure",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "85347f08f8314ca184fcc6a0e8c12c8c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794366,
+        "label": "pulmonary pressure",
+        "value": "pulmonary pressure",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "04000fe603db4c3dadd380e05a61b131",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794367,
+        "label": "blood pressure",
+        "value": "blood pressure",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "9031f879a4894226aa2a0aadd5693cab",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The force exerted by the circulating blood volume on the walls of the arteries",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "blood pressure",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "560a80d13d5d4e4ab92aff5b410afd07",
+    "ASSESSMENTITEMANSWERGUID": "9031f879a4894226aa2a0aadd5693cab",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794434,
+        "label": "circumflex (Cx) artery",
+        "value": "circumflex (Cx) artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "28b8d84142cd412387c7c7cab9f5f719",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794435,
+        "label": "right coronary artery",
+        "value": "right coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "cc6a7d8bcfcf4926aeb93b8b5a8104ed",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794436,
+        "label": "left main coronary artery",
+        "value": "left main coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0c96920ffd2e4534960dc44f2e3830f6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794437,
+        "label": "left anterior descending artery (LAD)",
+        "value": "left anterior descending artery (LAD)",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "9d209938f22441ef865f872218e8dfaf",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The right atrium and right ventricle with blood are supplied by",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "right coronary artery",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "2b533d14064844d39ec77ccd4c24bae0",
+    "ASSESSMENTITEMANSWERGUID": "cc6a7d8bcfcf4926aeb93b8b5a8104ed",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794352,
+        "label": "ejection fraction",
+        "value": "ejection fraction",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "6aa55321dab348e8abc0047969200758",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794353,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e7057728fb23449d9dea2059aba3eec2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794354,
+        "label": "repolarization",
+        "value": "repolarization",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8e8dfb625cb040e89a81c408bc037a92",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794355,
+        "label": "action potential",
+        "value": "action potential",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0d6d56896c7d4d70a8cf76d40cff83e5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The percentage of blood pumped out of a ventricle with each contraction",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "ejection fraction",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "e4ca30fd3ee54e36bd0c7ed8d7cacff7",
+    "ASSESSMENTITEMANSWERGUID": "6aa55321dab348e8abc0047969200758",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794380,
+        "label": "Semilunar valves",
+        "value": "Semilunar valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a09af67317cb4809bc89805a706cbb7c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794381,
+        "label": "Atrioventricular valves",
+        "value": "Atrioventricular valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "593f97b9384544af9440dffffeb4f56d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794382,
+        "label": "aortic valves",
+        "value": "aortic valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "7f0d7b42c4644c2abe63d9da133e3764",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794383,
+        "label": "pulmonary valves",
+        "value": "pulmonary valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8bf1bf80d1bf437699c9b2773624460e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Their closure causes the first heart sound (S1)",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Atrioventricular valves",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "c204fa9475894a54a69004987a8d335f",
+    "ASSESSMENTITEMANSWERGUID": "593f97b9384544af9440dffffeb4f56d",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794328,
+        "label": "pumps blood to the lungs",
+        "value": "pumps blood to the lungs",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "217057f6e8934741bbb566aa7f8c9baa",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794329,
+        "label": "pumps blood to the systemic circulation.",
+        "value": "pumps blood to the systemic circulation.",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "9e102edc9cde400c9567bcc30e999fee",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794330,
+        "label": "receives blood from the right and left pulmonary veins.",
+        "value": "receives blood from the right and left pulmonary veins.",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8670613f9ca74eafb99c0bc5074163cc",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794331,
+        "label": "receives blood from the superior and inferior vena cavae and the coronary sinus.",
+        "value": "receives blood from the superior and inferior vena cavae and the coronary sinus.",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "91819ee42e564562a37be145a75212db",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The right atrium",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "receives blood from the superior and inferior vena cavae and the coronary sinus.",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "0050fc5c710a4107b4e777cef12e245b",
+    "ASSESSMENTITEMANSWERGUID": "91819ee42e564562a37be145a75212db",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794388,
+        "label": "chemoreceptors",
+        "value": "chemoreceptors",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "5b525b1cd5344aa0a7fb07ec4626bdf5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794389,
+        "label": "baroreceptors",
+        "value": "baroreceptors",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5e920513b8a3460d844916a6a95c7730",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794390,
+        "label": "aorta",
+        "value": "aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fad1e50b71df4c38ad2ba990567dfc5d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794391,
+        "label": "heart rate",
+        "value": "heart rate",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "20a70d98a6fb428494cfcf16b63a2ca3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Detect changes in the concentration of hydrogen ions, oxygen, and carbon dioxide in the blood",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "chemoreceptors",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "becbe23d706947928927e4385e1c1376",
+    "ASSESSMENTITEMANSWERGUID": "5b525b1cd5344aa0a7fb07ec4626bdf5",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794430,
+        "label": "afterload",
+        "value": "afterload",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "62f49f8ad7aa4cfd9f78199d398c0e86",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794431,
+        "label": "atrial kick",
+        "value": "atrial kick",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "00ab928ff99b4ed6867a398b0935bbb3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794432,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cff395b62cff4e5fb12ef30943011c53",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794433,
+        "label": "peripheral resistance",
+        "value": "peripheral resistance",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b0fe56546f8448e6ae65ace3611d2abf",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The contribution of blood that is added to the ventricles and results from atrial contraction is called",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "atrial kick",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "6f5c69957766429eaec9b1e348369f59",
+    "ASSESSMENTITEMANSWERGUID": "00ab928ff99b4ed6867a398b0935bbb3",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794404,
+        "label": "cardiac cycle",
+        "value": "cardiac cycle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "f665913ff11a413a977b66265453f1ba",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794405,
+        "label": "systole",
+        "value": "systole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "2a079e5a37224afaa1732f59a6579f27",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794406,
+        "label": "diastole",
+        "value": "diastole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e5a4cd56fae64e63ab3fe204cd82439a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794407,
+        "label": "pulmonary circulation",
+        "value": "pulmonary circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "c226e5b4dbe2443c824106629df5f6b1",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Period between the begining of one beat of the heart to the next",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "cardiac cycle",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "bf40fb5ade35410c80338aeefe0bdca6",
+    "ASSESSMENTITEMANSWERGUID": "f665913ff11a413a977b66265453f1ba",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794336,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "31cd2ddf083c40de95f4636b8ced3499",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794337,
+        "label": "Inotropy",
+        "value": "Inotropy",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "661699b39f90426fb109f387cc2cf184",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794338,
+        "label": "ejection fraction",
+        "value": "ejection fraction",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "80723d8482a44c85815cb079e5b29a03",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794339,
+        "label": "chronotropy",
+        "value": "chronotropy",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "067fb86f56204ed1b46c301217ee71f9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Term that refers to a change in myocardial contractility",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Inotropy",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "5a58592cc40446f887ad1612552ce464",
+    "ASSESSMENTITEMANSWERGUID": "661699b39f90426fb109f387cc2cf184",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794412,
+        "label": "carbonated blood",
+        "value": "carbonated blood",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "dacdb9564f994ad9bc6a310440e5658c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794413,
+        "label": "deoxygenated blood",
+        "value": "deoxygenated blood",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8f4b87246eb54c15b23a29be5576fec5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794414,
+        "label": "oxygenated blood",
+        "value": "oxygenated blood",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "c0887a625ff14e84b50b13fc10fe4c60",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794415,
+        "label": "systemic blood",
+        "value": "systemic blood",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "c68b890ac31b44178e8505a27877543f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Blood saturated with oxygen is called",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "oxygenated blood",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "fe5b51813a1e47bcb9343d6c33da5d41",
+    "ASSESSMENTITEMANSWERGUID": "c0887a625ff14e84b50b13fc10fe4c60",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794368,
+        "label": "baroreceptors",
+        "value": "baroreceptors",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "a73f0aec35d448b990b830f428946ab6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794369,
+        "label": "chemoreceptors",
+        "value": "chemoreceptors",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a2f60ab64b314e2697a0806ad59ebf2a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794370,
+        "label": "action potential",
+        "value": "action potential",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ee42814c98ca49c4bb14edc026c462fe",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794371,
+        "label": "depolarization",
+        "value": "depolarization",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4ec9fdd328594b2d95fa1b2bfc16c7f8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Sensory receptors that detect changes in blood pressure",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "baroreceptors",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "78a008a30d0d42f883e84d609a1ce09c",
+    "ASSESSMENTITEMANSWERGUID": "a73f0aec35d448b990b830f428946ab6",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794395,
+        "label": "epicardium",
+        "value": "epicardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "05bdb2a7289d4d829d2bf0611df693de",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794396,
+        "label": "pericardium",
+        "value": "pericardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "772c6be6802c4f7abae811fed1008721",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794397,
+        "label": "myocardium",
+        "value": "myocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "222ffcc6e0f3484b8a97db63bd92684f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794398,
+        "label": "endocardium",
+        "value": "endocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "071a946236b449f2a3ca66db25d409df",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The middle layer of the heart wall that contains the atrial and ventricular muscle fibers necessary for contraction is the",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "myocardium",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "7ffb730600134657ab65d841fa53993c",
+    "ASSESSMENTITEMANSWERGUID": "222ffcc6e0f3484b8a97db63bd92684f",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794408,
+        "label": "cardiac output",
+        "value": "cardiac output",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a718c32ce7c2468eb75f2e01d869aa4d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794409,
+        "label": "corinto circulatio",
+        "value": "corinto circulatio",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "0b1be48fee944eb791623269ebecc963",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794410,
+        "label": "cardio-pulmonary cycle",
+        "value": "cardio-pulmonary cycle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "6498dff8255042b395fc969427ee21c4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794411,
+        "label": "systemic circulation",
+        "value": "systemic circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "65a428de3cae44d186ff0464926a22be",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Circulation of blood through the heart and heart muscle is",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "corinto circulatio",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "f8c69823abf54bf7b6e865f86c0958f3",
+    "ASSESSMENTITEMANSWERGUID": "0b1be48fee944eb791623269ebecc963",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794399,
+        "label": "aorta",
+        "value": "aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "bab3e14e68c049b9bb89f5c05cd71e4b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794400,
+        "label": "coronary sinus",
+        "value": "coronary sinus",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "e56846be9ea34d8b83d1acbc7f553256",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794401,
+        "label": "pulmonary vein",
+        "value": "pulmonary vein",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "139012d6d96d4dc9bf86cb2144529870",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794402,
+        "label": "posterior circumflex",
+        "value": "posterior circumflex",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "c36f79943ccf4530a272aceff5eb90d1",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794403,
+        "label": "sephanous vein",
+        "value": "sephanous vein",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "aeb7973c6822400292be74fbc42696b9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The right atrium receives deoxygenated blood from which of the following vessels?",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "coronary sinus",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "7ee9667ff10749909906d1a6a96588c4",
+    "ASSESSMENTITEMANSWERGUID": "e56846be9ea34d8b83d1acbc7f553256",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794344,
+        "label": "parietal",
+        "value": "parietal",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d2b34772e5164dd4bb0989f91d1c5d3e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794345,
+        "label": "pericardium",
+        "value": "pericardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "7cee87f9efb64537a6b114f581e252ca",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794346,
+        "label": "myocardium",
+        "value": "myocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b4472025b5f24bfb93c6fbddbc6c7158",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794347,
+        "label": "epicardium",
+        "value": "epicardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b1eeb96f4842474ab3b33cd7fa6e7c51",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Double-walled sac containing a small amount of serous fluid that reduces friction as the heart beats",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pericardium",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "cb9be304499b4cd9a39e08128bb2efaa",
+    "ASSESSMENTITEMANSWERGUID": "7cee87f9efb64537a6b114f581e252ca",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794340,
+        "label": "Semilunar valves",
+        "value": "Semilunar valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "230abf175e7e40988ffe0dcf546a9ee5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794341,
+        "label": "aortic valves",
+        "value": "aortic valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "7ed65f7b51804108bb34b235b4ce44e3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794342,
+        "label": "pulmonary valves",
+        "value": "pulmonary valves",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "c883a841cc2d40ada444f93009b265b8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794343,
+        "label": "Left ventricle",
+        "value": "Left ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d7d81852be1148758b745a41b42bd5d6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Their closure at the end of systole prevents the backward flow of blood into the ventricles",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Semilunar valves",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "3085d8faec4f44ef87f7527ca30b8545",
+    "ASSESSMENTITEMANSWERGUID": "230abf175e7e40988ffe0dcf546a9ee5",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794384,
+        "label": "left coronary artery",
+        "value": "left coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0e930ef7c45645b5a34b923d87121750",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794385,
+        "label": "right coronary artery",
+        "value": "right coronary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e3dc65e004214d6280d8b20da59735c3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794386,
+        "label": "Left ventricle",
+        "value": "Left ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "ac5af98c964747d392b095a7aef75964",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794387,
+        "label": "left atrium",
+        "value": "left atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e3b36ed11f594d47b8e879a48fa90f34",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Pumps oxygenated blood to the systemic circulation",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Left ventricle",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "6a317de10a484ed283da4701d2a0994f",
+    "ASSESSMENTITEMANSWERGUID": "ac5af98c964747d392b095a7aef75964",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794332,
+        "label": "the mitral valve",
+        "value": "the mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "80873b5b431946d68ff9ddec74742349",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794333,
+        "label": "the atrioventricullar valve",
+        "value": "the atrioventricullar valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "6142b1ec2da148e98de51b6c99528d1d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794334,
+        "label": "the semilunar valve",
+        "value": "the semilunar valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "ba803429149c4a00bee0d701f14d2b7b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794335,
+        "label": "the tricuspid valve",
+        "value": "the tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "809596e2853e47be9ccd3ce297955d58",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "When a ventricle relaxes in the normal heart, blood is prevented from flowing back into it by",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "the semilunar valve",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "ce41ae73c508405e945d8e8b56340c6f",
+    "ASSESSMENTITEMANSWERGUID": "ba803429149c4a00bee0d701f14d2b7b",
+    "ASSESSMENTFREETEXT": ""
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794356,
+        "label": "systole",
+        "value": "systole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "39b551ac0e974c7891b186c578776b49",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794357,
+        "label": "diastole",
+        "value": "diastole",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "270dd0e107d649cb94e94c33b68ec995",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794358,
+        "label": "stroke volume",
+        "value": "stroke volume",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "c34c2d5bdc4a4d049d1859c5588ccdae",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794359,
+        "label": "baroreceptors",
+        "value": "baroreceptors",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8ec13728440b47c3a7206e9e9dd10ae2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Phase of the cardiac cycle during which the greatest flow of blood enters the heart’s chambers",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "systole",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "e9fdf1af27fa43ff899172d29445985f",
+    "ASSESSMENTITEMANSWERGUID": "39b551ac0e974c7891b186c578776b49",
+    "ASSESSMENTFREETEXT": ""
+  }
+]

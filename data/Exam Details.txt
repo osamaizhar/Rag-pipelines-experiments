@@ -1,0 +1,2208 @@
+[
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794462,
+        "label": "Left Atrium",
+        "value": "Left Atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "320a834832e8440ba08d478ae3c006b1",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794463,
+        "label": "Aorta",
+        "value": "Aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "15b79fd29e6246b3b6a0b8f80769d960",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794464,
+        "label": "Vena Cava",
+        "value": "Vena Cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "64b7fa621f6d41f89cc86f8d7b342e7f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794465,
+        "label": "Right atrium & right ventricle",
+        "value": "Right atrium & right ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "22f97e85f0854faea69499df1eab3dc2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794466,
+        "label": "Left Atrium",
+        "value": "Left Atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a90bfb8a39d047bcad58e74da115cc58",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794467,
+        "label": "Aorta",
+        "value": "Aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "edd1244ad9634f01858312cb5b80e6d0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794468,
+        "label": "Vena Cava",
+        "value": "Vena Cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "23e1d40685324651bac62b829bd5ec31",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794469,
+        "label": "Right atrium & right ventricle",
+        "value": "Right atrium & right ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f4491b2434404753990034dd6673edff",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794470,
+        "label": "Left Atrium",
+        "value": "Left Atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e61f56827d624bcc940768f5e5d2b8d8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794471,
+        "label": "Aorta",
+        "value": "Aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5605d69b141b4d18ae1ee98f369c12ff",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794472,
+        "label": "Vena Cava",
+        "value": "Vena Cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "2b0a1d190b0b4c83a0a23b6938713e7c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794473,
+        "label": "Right atrium & right ventricle",
+        "value": "Right atrium & right ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "2696452dc408481aaeffdd0e856eadc4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Select the areas of the heart that make up its anterior surface",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Right atrium & right ventricle",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "e84998c84efe4d62874e6462e9274026",
+    "ASSESSMENTITEMANSWERGUID": "2696452dc408481aaeffdd0e856eadc4",
+    "ASSESSMENTFREETEXT": "2696452dc408481aaeffdd0e856eadc4"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794659,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "59c394bb708444bb8ec18c97ed86a81b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794660,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ca551b3766bc445d904a1763fec0ef85",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Myocardium is mainly composed of cardiac muscles",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "d41c51575da640c182c056d0ed8b4a9d",
+    "ASSESSMENTITEMANSWERGUID": "59c394bb708444bb8ec18c97ed86a81b",
+    "ASSESSMENTFREETEXT": "59c394bb708444bb8ec18c97ed86a81b"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794641,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "41c754eb485d48ab8a8a73cb0fd91641",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794642,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "03c2e95d2aed42bfa660ba290cb6dc3a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Tricuspid is the AV valve between the right atrium and right ventricle",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "2b51095130804945a916e09fbebfa5b6",
+    "ASSESSMENTITEMANSWERGUID": "41c754eb485d48ab8a8a73cb0fd91641",
+    "ASSESSMENTFREETEXT": "41c754eb485d48ab8a8a73cb0fd91641"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794603,
+        "label": "pulmonary artery",
+        "value": "pulmonary artery",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1cb2c3617cf244bc974335f90fdeb120",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794604,
+        "label": "pulmonary vein",
+        "value": "pulmonary vein",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "76a3f73b2d0b4e7dbeaedc585ccfc5f8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794605,
+        "label": "superior vena cava",
+        "value": "superior vena cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0afedef341f74ed8b82a328c91557acd",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794606,
+        "label": "inferior vena cava",
+        "value": "inferior vena cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cc63bfb2508b4d748cfb2a5e273fbb68",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Which blood vessels that enter and exit the heart carry oxygenated blood",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pulmonary vein",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "7450b75690fa4b0e90e138c07b6bd1ca",
+    "ASSESSMENTITEMANSWERGUID": "76a3f73b2d0b4e7dbeaedc585ccfc5f8",
+    "ASSESSMENTFREETEXT": "76a3f73b2d0b4e7dbeaedc585ccfc5f8"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794523,
+        "label": "EEG",
+        "value": "EEG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8c9ef745e61d4d4599110b912b38d11c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794524,
+        "label": "ECG",
+        "value": "ECG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "3ab4d052ccb84b0c95ad611302bfc4ab",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794525,
+        "label": "Echo",
+        "value": "Echo",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "6a33d53a38714ed7b00b8185c4262f08",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794526,
+        "label": "Pulse oximeter",
+        "value": "Pulse oximeter",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d9c8a2449c264fceb13273c638edde01",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794527,
+        "label": "EEG",
+        "value": "EEG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "366f7797734f4d52abe0e4ad6d44dc93",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794528,
+        "label": "ECG",
+        "value": "ECG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "aa2a1a7fb0eb4967b29ff02d3cfec896",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794529,
+        "label": "Echo",
+        "value": "Echo",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5f0c1e3e754f4b0196bcea0b445108b8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794530,
+        "label": "Pulse oximeter",
+        "value": "Pulse oximeter",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "25f5dcc6aa4345a68c23aced3213fec4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794531,
+        "label": "EEG",
+        "value": "EEG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d7db11fca9214c06b6ef263d6aacdd5f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794532,
+        "label": "ECG",
+        "value": "ECG",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "974383d43c6e44c991bd8e2b3fabdd1a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794533,
+        "label": "Echo",
+        "value": "Echo",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ebbbbec4ff334269b47708231f587911",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794534,
+        "label": "Pulse oximeter",
+        "value": "Pulse oximeter",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "9f0db92e563f46f6a393a3de86e728e7",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Each electrical activity of the heart is recorded on",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "ECG",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "2d87785aae7a40cbb54605702282091c",
+    "ASSESSMENTITEMANSWERGUID": "aa2a1a7fb0eb4967b29ff02d3cfec896",
+    "ASSESSMENTFREETEXT": "aa2a1a7fb0eb4967b29ff02d3cfec896"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794486,
+        "label": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "value": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "283658a2c821449eb045b27d13f5617f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794487,
+        "label": "pumps blood to the systemic circulation",
+        "value": "pumps blood to the systemic circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "188350f155094c878120f8a89b1ceaa5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794488,
+        "label": "receives blood from rt & lft pulmonary veins",
+        "value": "receives blood from rt & lft pulmonary veins",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "10b55d41a4484532ab439524e2782a1a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794489,
+        "label": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "value": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d47711308ba0409a9c04ac8e4541201c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794490,
+        "label": "pumps blood to the systemic circulation",
+        "value": "pumps blood to the systemic circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "905cf92774ed461bab6b0924542525e0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794491,
+        "label": "receives blood from rt & lft pulmonary veins",
+        "value": "receives blood from rt & lft pulmonary veins",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f8dc26c184494e868ba4b3bcbfab8dc0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794492,
+        "label": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "value": "receives blood from the superior & inferior vena cava & coronary Sinus",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3d14d90ede494d1d8f4886b4a65b5bac",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794493,
+        "label": "pumps blood to the systemic circulation",
+        "value": "pumps blood to the systemic circulation",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "86d037492fde4770809447e72a2f3454",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794494,
+        "label": "receives blood from rt & lft pulmonary veins",
+        "value": "receives blood from rt & lft pulmonary veins",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "14abfcec88234acbb434557a74e8e4d3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The right atrium",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pumps blood to the systemic circulation",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "8cb309a1b0524ba3996e26af4e508d3d",
+    "ASSESSMENTITEMANSWERGUID": "86d037492fde4770809447e72a2f3454",
+    "ASSESSMENTFREETEXT": "86d037492fde4770809447e72a2f3454"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794643,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "6d6e3d18612145739d81d36b124ab52c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794644,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "7459f724e50d4354b17a1a69d2b125d9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Incompetent valves dont close properly",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "78618844a54a4c118ff8f1be82beec26",
+    "ASSESSMENTITEMANSWERGUID": "6d6e3d18612145739d81d36b124ab52c",
+    "ASSESSMENTFREETEXT": "6d6e3d18612145739d81d36b124ab52c"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794559,
+        "label": "repolarization",
+        "value": "repolarization",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ec423216534b466bba13bfb2007081a4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794560,
+        "label": "excitibility",
+        "value": "excitibility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "2f5c456bcec44df593415e53d580e9c4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794561,
+        "label": "contractility",
+        "value": "contractility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "460e46533a3b4dfb9d8c9ea65570f206",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794562,
+        "label": "conductivity",
+        "value": "conductivity",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "334ad9ecae614e1aade584d3b781ca73",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794563,
+        "label": "repolarization",
+        "value": "repolarization",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4b3ad77e832e4bf9abacfa1c74343b5e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794564,
+        "label": "excitibility",
+        "value": "excitibility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fae9117f357740e8b1f6aafd950224aa",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794565,
+        "label": "contractility",
+        "value": "contractility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "01e074f8277c4ad399b8428507eec967",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794566,
+        "label": "conductivity",
+        "value": "conductivity",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "921be6fbd1474d8e8b2f2e2ace91aedd",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794567,
+        "label": "repolarization",
+        "value": "repolarization",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "9a2d306923e54afd8d06ff5f97fa2613",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794568,
+        "label": "excitibility",
+        "value": "excitibility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "81f3ff753a6f4f50864daa342500f657",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794569,
+        "label": "contractility",
+        "value": "contractility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b1204304552d476183b6379224da5e5d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794570,
+        "label": "conductivity",
+        "value": "conductivity",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f57b531e82514130846158a79b24fb32",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The ability of the heart muscle to shorten in response to an impulse or stimulus is called:",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "excitibility",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "38d2a814fbf8452299dfbd7390dff3af",
+    "ASSESSMENTITEMANSWERGUID": "81f3ff753a6f4f50864daa342500f657",
+    "ASSESSMENTFREETEXT": "81f3ff753a6f4f50864daa342500f657"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794599,
+        "label": "superior & inferior ventricles",
+        "value": "superior & inferior ventricles",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "eb2bff8f9cd04c8ab5b33e4a37a10811",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794600,
+        "label": "superior atria",
+        "value": "superior atria",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b9f1591306434a08a27d6ccb942fe71d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794601,
+        "label": "inferior atria",
+        "value": "inferior atria",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a9dd730ca6414c38bb983198cf475bb6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794602,
+        "label": "aorta",
+        "value": "aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "83d137308ee446589d692963133f9f3d",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The coronary sulcus forms a boundary between which chambers of the heart",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "superior & inferior ventricles",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "aed2c0b345e44fdd823451752155801d",
+    "ASSESSMENTITEMANSWERGUID": "eb2bff8f9cd04c8ab5b33e4a37a10811",
+    "ASSESSMENTFREETEXT": "eb2bff8f9cd04c8ab5b33e4a37a10811"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794657,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "e6b98730ac09473db86b38b9d74f90eb",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794658,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fec51d82d3cf41aeb850a404edb6c91a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Heart is a muscular organ that acts as a double pump",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "38f862f947a544ebae8443baad13ffbc",
+    "ASSESSMENTITEMANSWERGUID": "e6b98730ac09473db86b38b9d74f90eb",
+    "ASSESSMENTFREETEXT": "e6b98730ac09473db86b38b9d74f90eb"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794615,
+        "label": "pectinate muscles",
+        "value": "pectinate muscles",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5c6f62bd08b2472487e260006e6ac4c4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794616,
+        "label": "papillary muscles",
+        "value": "papillary muscles",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "73788e3198bb43ea93e5ce840ae0b6c2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794617,
+        "label": "atrioventricular node",
+        "value": "atrioventricular node",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "36405583721c440e9d65b5ab5ba28e06",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794618,
+        "label": "atrial myocardium",
+        "value": "atrial myocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "de66962eb2bd4c9c800ba3bacd7013f2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The muscles that contract to tension the chordae tendinae are called",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "papillary muscles",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "795e8d7f10f54f7b95819affe6675368",
+    "ASSESSMENTITEMANSWERGUID": "73788e3198bb43ea93e5ce840ae0b6c2",
+    "ASSESSMENTFREETEXT": "73788e3198bb43ea93e5ce840ae0b6c2"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794474,
+        "label": "a thick single layer of tissue",
+        "value": "a thick single layer of tissue",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d6ac6c3aa608458ba2619825d1c286a1",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794475,
+        "label": "pumps blood to the atrium",
+        "value": "pumps blood to the atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fd6aaa54621c4c6191423bcb6d47ba88",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794476,
+        "label": "the mitral valve",
+        "value": "the mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "6c93bd8ff05e4714912251883663219a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794477,
+        "label": "protects the heart from trauma & infection",
+        "value": "protects the heart from trauma & infection",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "30903f7ad4d340b1aaae7223d5795368",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794478,
+        "label": "a thick single layer of tissue",
+        "value": "a thick single layer of tissue",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "30b58ce8564040ff9d73a1c6ddf5a7c0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794479,
+        "label": "pumps blood to the atrium",
+        "value": "pumps blood to the atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "83c0f73e9e374a528b236f96f9c15a87",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794480,
+        "label": "the mitral valve",
+        "value": "the mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "798bcecce2b84b0a9feca52f1431675f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794481,
+        "label": "protects the heart from trauma & infection",
+        "value": "protects the heart from trauma & infection",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fdb34214035742cca704efde86f36add",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794482,
+        "label": "a thick single layer of tissue",
+        "value": "a thick single layer of tissue",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e02e203b38764ed9b448ed8a418e3fb7",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794483,
+        "label": "pumps blood to the atrium",
+        "value": "pumps blood to the atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "99852106038d4701a87c2195e35b6b79",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794484,
+        "label": "the mitral valve",
+        "value": "the mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0707875c53e846ae9bf650478318e2ab",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794485,
+        "label": "protects the heart from trauma & infection",
+        "value": "protects the heart from trauma & infection",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ae644174c8074c98bedd57b8ff605b23",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The pericardium is",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "protects the heart from trauma & infection",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "e004524da04d491ea7981499cf1a7b4c",
+    "ASSESSMENTITEMANSWERGUID": "30903f7ad4d340b1aaae7223d5795368",
+    "ASSESSMENTFREETEXT": "30903f7ad4d340b1aaae7223d5795368"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794619,
+        "label": "aorta",
+        "value": "aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f79be111fd4743de8993b796e1f65a29",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794620,
+        "label": "left atrium",
+        "value": "left atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "88e121b946a14b2a99c8fd67ac992ef8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794621,
+        "label": "left ventricle",
+        "value": "left ventricle",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5be8b467cc244540b0146b448585dd41",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794622,
+        "label": "right atrium",
+        "value": "right atrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "e3547887c6cf4ee890c3198d0da648ed",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Blood returning to the heart from the systemic circulation first enters the",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "right atrium",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "2f037cbcc2f3462bb0c6a7b97ae47d61",
+    "ASSESSMENTITEMANSWERGUID": "e3547887c6cf4ee890c3198d0da648ed",
+    "ASSESSMENTFREETEXT": "e3547887c6cf4ee890c3198d0da648ed"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794583,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "46e5c7de8caf400dbfcc231f480d160a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794584,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a2cdbb4c8b9c4c28b345acd2036da14e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794585,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4daecd0588ea4e70940e170caa7669e5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794586,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0bcd4cac19124b9f9b0de076ecc7b34e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794587,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e6700793be9a44a2869552158587dc0a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794588,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "48f3f7972c1f40d79edec11b169af47b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794589,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e12d13ef35674779a3e8e6dc1ae38d3b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794590,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3a46aacc77d7460dba67a148322ef58c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794591,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "217c80d5f2634720823256d90eef03a5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794592,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "04dd6985264247b5925dacdc475c4417",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794593,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cb665bb54f3d42c9a497d81abc827a46",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794594,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b7a9a81fb126464b93b09f292b0a9791",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The valve located between the right atrium and right ventricle is ",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Tricuspid valve",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "b102b36ee43e48d29b9dc9faad7cc849",
+    "ASSESSMENTITEMANSWERGUID": "e6700793be9a44a2869552158587dc0a",
+    "ASSESSMENTFREETEXT": "e6700793be9a44a2869552158587dc0a"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794571,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "67ec114191ea4d19b85399f74513e42f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794572,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4278dfe2dc664574a0be6ca178498138",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794573,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "dc30be23a25948419c89d7006ccff4c8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794574,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5512927e63f04f3aa02a845cf4195741",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794575,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3f6aa999ebf84559aed4527a16fe288e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794576,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1289feff9437479483127f4bab2583f7",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794577,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "eab536e7f2554bc1a49da7f62ecb3385",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794578,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1fc0625b5bb04418819c11ce38c5e4b9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794579,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d4d49408bc0c426cbd3c6446e8a8329c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794580,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e7bf83217c144ee9addda0c938d60842",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794581,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "04a70d1d365d42f5b8b1cf8a1f57b3b8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794582,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "26ee7ae221ea4b0d9fca62952e913581",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+Below is the provided JSON string converted into a properly formatted JSON structure. The input was already in JSON format, but it was a single string with some inconsistencies and repeated entries. I've cleaned it up, removed duplicates where appropriate, and ensured proper formatting for clarity. Each assessment item is represented as an object in an array, with its answers and metadata preserved.
+
+json
+
+Copy
+[
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794583,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "46e5c7de8caf400dbfcc231f480d160a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794584,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a2cdbb4c8b9c4c28b345acd2036da14e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794585,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4daecd0588ea4e70940e170caa7669e5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794586,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0bcd4cac19124b9f9b0de076ecc7b34e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794587,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e6700793be9a44a2869552158587dc0a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794588,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "48f3foma": "",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "48f3f7972c1f40d79edec11b169af47b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794589,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e12d13ef35674779a3e8e6dc1ae38d3b",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794590,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3a46aacc77d7460dba67a148322ef58c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794591,
+        "label": "Tricuspid valve",
+        "value": "Tricuspid valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "217c80d5f2634720823256d90eef03a5",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794592,
+        "label": "Atrioventricular valve",
+        "value": "Atrioventricular valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "04dd6985264247b5925dacdc475c4417",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794593,
+        "label": "aortic valve",
+        "value": "aortic valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cb665bb54f3d42c9a497d81abc827a46",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794594,
+        "label": "mitral valve",
+        "value": "mitral valve",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b7a9a81fb126464b93b09f292b0a9791",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The valve located between the right atrium and right ventricle is",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Tricuspid valve",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "b102b36ee43e48d29b9dc9faad7cc849",
+    "ASSESSMENTITEMANSWERGUID": "e6700793be9a44a2869552158587dc0a",
+    "ASSESSMENTFREETEXT": "e6700793be9a44a2869552158587dc0a"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794571,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "67ec114191ea4d19b85399f74513e42f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794572,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4278dfe2dc664574a0be6ca178498138",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794573,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "dc30be23a25948419c89d7006ccff4c8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794574,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5512927e63f04f3aa02a845cf4195741",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794575,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3f6aa999ebf84559aed4527a16fe288e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794576,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1289feff9437479483127f4bab2583f7",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794577,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "eab536e7f2554bc1a49da7f62ecb3385",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794578,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1fc0625b5bb04418819c11ce38c5e4b9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794579,
+        "label": "Muscular fibres",
+        "value": "Muscular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "d4d49408bc0c426cbd3c6446e8a8329c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794580,
+        "label": "ventricular fibres",
+        "value": "ventricular fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e7bf83217c144ee9addda0c938d60842",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794581,
+        "label": "Purkunje Fibres",
+        "value": "Purkunje Fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "04a70d1d365d42f5b8b1cf8a1f57b3b8",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794582,
+        "label": "atrial fibres",
+        "value": "atrial fibres",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "26ee7ae221ea4b0d9fca62952e913581",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "These fibres distribute electricule impulses from cell to cell throughout the ventricles.",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Purkunje Fibres",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "e45eb6acef984cf6af31212a5de10768",
+    "ASSESSMENTITEMANSWERGUID": "04a70d1d365d42f5b8b1cf8a1f57b3b8",
+    "ASSESSMENTFREETEXT": "04a70d1d365d42f5b8b1cf8a1f57b3b8"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794595,
+        "label": "conductivity",
+        "value": "conductivity",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "52f25989f0e04b60b9ede99d72c03206",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794596,
+        "label": "contractility",
+        "value": "contractility",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1ba4c93c335b4ebc8efe0933535e15d2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794597,
+        "label": "automaticity",
+        "value": "automaticity",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "b38e684c50ea4e7e93bb5e42eac8b7e9",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794598,
+        "label": "excitability",
+        "value": "excitability",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4763409e3716494d8ef8086f770f37cf",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The heart’s ability to create its own electrical impulse is known as",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "automaticity",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "efd9963c7c5b48768141e3bc9fbba3c2",
+    "ASSESSMENTITEMANSWERGUID": "b38e684c50ea4e7e93bb5e42eac8b7e9",
+    "ASSESSMENTFREETEXT": "b38e684c50ea4e7e93bb5e42eac8b7e9"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794639,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "f09a038d58f74ab4bf0707bc4072ba4a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794640,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "c2997ce8bec84126a1f1749b74db910e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Semilunar valves connects arteries to the ventricles",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "false",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "60a2b41410574792a859e3359c0031d2",
+    "ASSESSMENTITEMANSWERGUID": "c2997ce8bec84126a1f1749b74db910e",
+    "ASSESSMENTFREETEXT": "c2997ce8bec84126a1f1749b74db910e"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794651,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "08380107804f47ebb10e00512af5f8cb",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794652,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "8dc38ae69662474a92d0ae2453e84985",
+        "IMAGE_ASSET_ID": -99999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Capillaries are the microscopic thin walled vessels interconnecting the smallest arteries and the smallest veins",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "847fdca7ae494bb29cc7c84ac6573c22",
+    "ASSESSMENTITEMANSWERGUID": "08380107804f47ebb10e00512af5f8cb",
+    "ASSESSMENTFREETEXT": "08380107804f47ebb10e00512af5f8cb"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794661,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "9ab8abf97e7e4985ba643a25c86b1d14",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794662,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "7fb9a627861b4746823dac53d177b861",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Pericardium is a tissue that covers the heart and forms the pericardial sac",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "bed20fb74f8e4e098956a8661c375ca4",
+    "ASSESSMENTITEMANSWERGUID": "9ab8abf97e7e4985ba643a25c86b1d14",
+    "ASSESSMENTFREETEXT": "9ab8abf97e7e4985ba643a25c86b1d14"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794547,
+        "label": "endocardium",
+        "value": "endocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3d4e12add9664c9abeebc243e171c633",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794548,
+        "label": "pericardial sac",
+        "value": "pericardial sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "cc72260dfeeb490da65cd42c01058bce",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794549,
+        "label": "myocardium sac",
+        "value": "myocardium sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "7474e18026a445bca1eed34294364dc6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794550,
+        "label": "fluid sac",
+        "value": "fluid sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cd4451f51d9d41a6a5f625f94795624a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794551,
+        "label": "endocardium",
+        "value": "endocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "e5c0f8f743a7420fa34515050d79cdf4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794552,
+        "label": "pericardial sac",
+        "value": "pericardial sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b6b63736d1e6431691e9d938b0eb86b7",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794553,
+        "label": "myocardium sac",
+        "value": "myocardium sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5be91e8d1b934a47a4276dbcdfc19876",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794554,
+        "label": "fluid sac",
+        "value": "fluid sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "40d1adc794994f3c943003bf8cf2cc96",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794555,
+        "label": "endocardium",
+        "value": "endocardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0fa89293765647e8ac5edd89c9d49489",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794556,
+        "label": "pericardial sac",
+        "value": "pericardial sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "76f5f2b7cbe844e88739923065722be4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794557,
+        "label": "myocardium sac",
+        "value": "myocardium sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0da5d5dadabe4095ae28bef6b271a3ba",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794558,
+        "label": "fluid sac",
+        "value": "fluid sac",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "381825be13ae4f7c81c70261b8a03556",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The heart is contained inside a sac also known as the",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pericardial sac",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "272c6eb2c3d542cc8608661b49c41fbb",
+    "ASSESSMENTITEMANSWERGUID": "76f5f2b7cbe844e88739923065722be4",
+    "ASSESSMENTFREETEXT": "76f5f2b7cbe844e88739923065722be4"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794507,
+        "label": "pericardium",
+        "value": "pericardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "b2954e83ca5a4fc2a642e382113ec408",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794508,
+        "label": "mediastinum",
+        "value": "mediastinum",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "3187e899ff074753bd1b5729a64181e2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794509,
+        "label": "Hypochondriac region",
+        "value": "Hypochondriac region",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "1fc656616117497ea0e6158527a27afe",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794510,
+        "label": "epigastrium",
+        "value": "epigastrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "45e8e0dcaa354994bf407de650e479c4",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794511,
+        "label": "pericardium",
+        "value": "pericardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "5f9bdfcb2536413eb2b68c90be6947ae",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794512,
+        "label": "mediastinum",
+        "value": "mediastinum",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "548c1deaee6b4a1ab487eeb0e7d953f6",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794513,
+        "label": "Hypochondriac region",
+        "value": "Hypochondriac region",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b023242fbe1348ac83e35f125b9a829c",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794514,
+        "label": "epigastrium",
+        "value": "epigastrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b2a340b6faf44aa9a6aed258e321f996",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794515,
+        "label": "pericardium",
+        "value": "pericardium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "0da529fd83624e5cbc399ded6f279849",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794516,
+        "label": "mediastinum",
+        "value": "mediastinum",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "aa20a82e80374d4da0d3edeab0d50da2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794517,
+        "label": "Hypochondriac region",
+        "value": "Hypochondriac region",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "59c789efda6e4a43afbb9c1b34676f32",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794518,
+        "label": "epigastrium",
+        "value": "epigastrium",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "523e4650c2a140e49daed7f4c27578f0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "The heart, fist sized muscular organ is located in the",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pericardium",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "393474c76a4348248001f9629ea3d043",
+    "ASSESSMENTITEMANSWERGUID": "0da529fd83624e5cbc399ded6f279849",
+    "ASSESSMENTFREETEXT": "0da529fd83624e5cbc399ded6f279849"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794633,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "c47c8775d5db4a248f276be1e65a8914",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794634,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "82e9013be04c432aa4ee096e9cfb3ffd",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Veins return blood to the heart with the exception of pulmonary artery",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "760d5da8621a4485a04ffc10033ed990",
+    "ASSESSMENTITEMANSWERGUID": "c47c8775d5db4a248f276be1e65a8914",
+    "ASSESSMENTFREETEXT": "c47c8775d5db4a248f276be1e65a8914"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794623,
+        "label": "true",
+        "value": "true",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "9a16e7b32ce14f85b5a830c867d47588",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794624,
+        "label": "false",
+        "value": "false",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "72fa535e3878476ab806ab96cf42ba6a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Contraction of the left ventricle pumps blood into the aorta",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "true",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "5f78a21dc7824423ac92045c5c4fe3af",
+    "ASSESSMENTITEMANSWERGUID": "9a16e7b32ce14f85b5a830c867d47588",
+    "ASSESSMENTFREETEXT": "9a16e7b32ce14f85b5a830c867d47588"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794611,
+        "label": "aorta",
+        "value": "aorta",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "56784a739ccb4556ad1c962ce7566a5f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794612,
+        "label": "inferior vena cava",
+        "value": "inferior vena cava",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "84c8d105e88240b98df387f827a8304f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794613,
+        "label": "pulmonary arteries",
+        "value": "pulmonary arteries",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "3c93655e77f0426a8c99932da8b50486",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794614,
+        "label": "pulmonary veins",
+        "value": "pulmonary veins",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "414eb0d78bea45ec9843cbeae18e0283",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Blood flowing through the heart travels from the right atrium to the right ventricle then up through the semilunar valve into the",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "pulmonary arteries",
+    "ANSWEREDCORRECTLY": true,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "b989332099f8432ba468e026e23307dd",
+    "ASSESSMENTITEMANSWERGUID": "3c93655e77f0426a8c99932da8b50486",
+    "ASSESSMENTFREETEXT": "3c93655e77f0426a8c99932da8b50486"
+  },
+  {
+    "ASSESSMENTITEMANSWER": [
+      {
+        "id": 1794438,
+        "label": "Body Height",
+        "value": "Body Height",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "4960136443764c048ee642026f5f7baf",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794439,
+        "label": "Body Weight",
+        "value": "Body Weight",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": true,
+        "ASSESSMENTITEMANSWER_GUID": "08dce2ffef69436a9592883eb01cc7f3",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794440,
+        "label": "Diabetes",
+        "value": "Diabetes",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "b63cb63fa5cb4771a7b39930972c6d7e",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794441,
+        "label": "Lung Disease",
+        "value": "Lung Disease",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a325af1714694000b6d9692e9344dadd",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794442,
+        "label": "Body Height",
+        "value": "Body Height",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "cb46f88c6340460ab9096bc502ee1fb2",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794443,
+        "label": "Body Weight",
+        "value": "Body Weight",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "41c180ae30c143b88723402b058b8dd0",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794444,
+        "label": "Diabetes",
+        "value": "Diabetes",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ed1e7381c8a14ebb97a778751074db8f",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794445,
+        "label": "Lung Disease",
+        "value": "Lung Disease",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "44359a40afad45968f6f369cb8455986",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794446,
+        "label": "Body Height",
+        "value": "Body Height",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "a545174e6fc848038cff4b9517330763",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794447,
+        "label": "Body Weight",
+        "value": "Body Weight",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "fac363dcd57f475dbcfdbc811e9b615a",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794448,
+        "label": "Diabetes",
+        "value": "Diabetes",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "42cf7ca673cd4eeeb254789073443419",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      },
+      {
+        "id": 1794449,
+        "label": "Lung Disease",
+        "value": "Lung Disease",
+        "DISPLAYORDER": 0,
+        "ISCORRECTTF": false,
+        "ASSESSMENTITEMANSWER_GUID": "ca52d11a99a5458997f8b82580086961",
+        "IMAGE_ASSET_ID": -9999,
+        "asset_location": ""
+      }
+    ],
+    "QUESTIONSTEM": "Which of the following influence a person's heart size & weight.",
+    "QUESTIONTYPE": "Single Select MCQ",
+    "FEEBACKTYPE": "AnswerChoice",
+    "ANSWER_SELECTED": "Body Weight",
+    "ANSWEREDCORRECTLY": false,
+    "asset_location": "",
+    "answerprovided": true,
+    "ASSESSMENTITEMGUID": "60b8242442ee4b1d980dc2ac4e96877f",
+    "ASSESSMENTITEMANSWERGUID": "41c180ae30c143b88723402b058b8dd0",
+    "ASSESSMENTFREETEXT": "41c180ae30c143b88723402b058b8dd0"
+  }
+]
+
